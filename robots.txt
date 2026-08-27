@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.idolsegem.com/sitemap.xml
+Sitemap: https://www.idolegitimkurumlari.com.tr/sitemap.xml

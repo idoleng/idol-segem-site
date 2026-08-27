@@ -57,7 +57,7 @@ Vercel'de **Settings → Environment Variables** altına ekleyin:
 | `PAYTR_MERCHANT_ID` | Mağaza No |
 | `PAYTR_MERCHANT_KEY` | Mağaza Parola |
 | `PAYTR_MERCHANT_SALT` | Mağaza Gizli Anahtar |
-| `SITE_URL` | `https://www.idolsegem.com` (sonda eğik çizgi olmadan) |
+| `SITE_URL` | `https://www.idolegitimkurumlari.com.tr` (sonda eğik çizgi olmadan) |
 | `PAYTR_TEST_MODE` | Test için `1`, canlıda `0` |
 
 Bu değerler yalnızca sunucuda kullanılır, tarayıcıya hiçbir zaman gönderilmez.
@@ -68,7 +68,7 @@ Bu değerler yalnızca sunucuda kullanılır, tarayıcıya hiçbir zaman gönder
 PayTR Mağaza Paneli → Ayarlar → **Bildirim URL** alanına:
 
 ```
-https://www.idolsegem.com/api/paytr-bildirim
+https://www.idolegitimkurumlari.com.tr/api/paytr-bildirim
 ```
 
 Bu adres tanımlanmazsa ödemeler onaylanmaz. Ödemenin gerçekten tamamlandığı
@@ -85,7 +85,7 @@ geçiş talebi gönderin, sonra `PAYTR_TEST_MODE=0` yapın.
 
 ## Yayına almadan önce
 
-- [ ] Alan adını alıp Vercel'e bağlayın; `www.idolsegem.com` geçen yerleri gerçek adresle değiştirin (`index.html`, `sitemap.xml`, `robots.txt`, `SITE_URL`)
+- [ ] Alan adını alıp Vercel'e bağlayın; `www.idolegitimkurumlari.com.tr` geçen yerleri gerçek adresle değiştirin (`index.html`, `sitemap.xml`, `robots.txt`, `SITE_URL`)
 - [ ] Hukuki sayfaları (mesafeli satış, ön bilgilendirme, iptal-iade, gizlilik) avukat ya da mali müşavirle kontrol ettirin
 - [ ] `ODENEBILIR` ve `FIYATLAR` listelerine gerçek fiyatları yazın
 - [ ] Sabit telefon ve kurumsal e-posta ekleyin
