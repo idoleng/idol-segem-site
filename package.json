@@ -1,0 +1,7 @@
+{
+  "name": "idol-segem-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ozel IDOL Sosyal Etkinlik ve Gelisim Merkezi kurum web sitesi",
+  "engines": { "node": ">=18" }
+}
