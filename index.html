@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>İDOL SEGEM — Gelibolu | LGS ve TYT-AYT Hazırlık, Özel Ders, Eğitim Koçluğu</title>
-<meta name="description" content="İDOL SEGEM, Gelibolu'da 2010'dan beri LGS ve TYT-AYT hazırlık, branş bazında bire bir özel ders, eğitim koçluğu ve AHOB anlayarak hızlı okuma programları sunar.">
+<title>İDOL SEGEM — Gelibolu | İlkokul, Ortaokul, LGS ve TYT-AYT Hazırlık, Özel Ders</title>
+<meta name="description" content="İDOL SEGEM, Gelibolu'da 2010'dan beri ilkokul ve ortaokul destek programları, LGS ve TYT-AYT hazırlık, branş bazında bire bir özel ders, eğitim koçluğu ve AHOB hızlı okuma programları sunar.">
 <link rel="canonical" href="https://www.idolegitimkurumlari.com.tr/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0AA3DD">
@@ -37,7 +37,7 @@
   "url": "https://www.idolegitimkurumlari.com.tr/",
   "logo": "https://www.idolegitimkurumlari.com.tr/logo-idol.png",
   "image": "https://www.idolegitimkurumlari.com.tr/og-kapak.png",
-  "description": "Gelibolu'da LGS ve TYT-AYT hazırlık, branş bazında bire bir özel ders, eğitim koçluğu, AHOB anlayarak hızlı okuma ve bilişsel beceri programları sunan sosyal etkinlik ve gelişim merkezidir.",
+  "description": "Gelibolu'da 2-7. sınıf destek programları, LGS ve TYT-AYT hazırlık, branş bazında bire bir özel ders, eğitim koçluğu, AHOB hızlı okuma ve bilişsel beceri programları sunan sosyal etkinlik ve gelişim merkezidir.",
   "foundingDate": "2010",
   "telephone": "+90-541-566-98-75",
   "email": "idolenglishegitim@gmail.com",
@@ -533,7 +533,7 @@ ul.temiz{list-style:none; padding:0; margin:0}
       <div class="hero-ic">
         <span class="hero-etiket"><i></i> Gelibolu · 2010'dan beri</span>
         <h1><span class="h1-ust">Fark yaratanların eğitim platformu</span><em>“Geleceğin İDOLlerini yetiştiriyoruz.”</em></h1>
-        <p class="hero-alt">LGS ve TYT-AYT hazırlık programları, branş bazında bire bir özel ders, eğitim koçluğu ve AHOB hızlı okuma programları yürütüyoruz. Her öğrenciyi bir rehber öğretmen takip eder, veliye her ay yazılı gelişim raporu iletir.</p>
+        <p class="hero-alt">İlkokuldan liseye; sınıf destek programları, LGS ve TYT-AYT hazırlık, branş bazında bire bir özel ders, eğitim koçluğu ve AHOB hızlı okuma programları yürütüyoruz. Her öğrenciyi bir rehber öğretmen takip eder, veliye her ay yazılı gelişim raporu iletir.</p>
         <div class="hero-dgler">
           <a class="dg dg-sari" href="#/kurslar">Kursları incele
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -553,7 +553,7 @@ ul.temiz{list-style:none; padding:0; margin:0}
     <div class="kap">
       <div class="ist-grid" id="ist-grid">
         <div class="ist-kutu"><div class="ist-sayi" data-sayac="5000" data-son="+">0</div><div class="ist-etiket">Mezun öğrenci</div></div>
-        <div class="ist-kutu"><div class="ist-sayi" data-sayac="12" data-son="">0</div><div class="ist-etiket">Aktif program</div></div>
+        <div class="ist-kutu"><div class="ist-sayi" data-sayac="14" data-son="">0</div><div class="ist-etiket">Aktif program</div></div>
         <div class="ist-kutu"><div class="ist-sayi" data-sayac="5" data-son="">0</div><div class="ist-etiket">Grup başına öğrenci</div></div>
       </div>
     </div>
@@ -1194,6 +1194,7 @@ const KURUM = {
 
 /* ---- Kategoriler -------------------------------------------------- */
 const KATEGORILER = [
+  {id:'temel',     ad:'İlkokul ve Ortaokul', renk:'#0E5F86', aciklama:'2-7. sınıf destek programları'},
   {id:'lgs',       ad:'LGS Hazırlık',       renk:'#1E1B1C', aciklama:'8. sınıf sınav programı'},
   {id:'yks',       ad:'TYT-AYT Hazırlık',    renk:'#0A6E9E', aciklama:'Lise düzeyi sınav programı'},
   {id:'kocluk',    ad:'Eğitim Koçluğu',      renk:'#12708A', aciklama:'Bireysel takip ve çalışma planı'},
@@ -1204,6 +1205,44 @@ const KATEGORILER = [
 
 /* ---- Kurslar ------------------------------------------------------ */
 const KURSLAR = [
+  {
+    slug:'ilkokul-destek', ad:'İlkokul Destek Programı · 2-4. Sınıf', kategori:'temel', seviye:'İlkokul',
+    fiyat:7500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
+    kontenjan:'5 öğrenci', oneCikan:true,
+    ozet:'İlkokul öğrencilerinin temel becerilerini sağlamlaştıran haftalık destek programıdır.',
+    aciklama:'İlkokul yıllarında kazanılmayan bir beceri, sonraki yıllarda kendiliğinden kapanmaz; aksine üstüne konan her konu daha zor gelir. Bu program, okuma-anlama ve dört işlem becerisini bir bütün olarak ele alır. Öğrenci okulda ne işliyorsa program onunla paralel ilerler, ancak tempo öğrencinin kendi hızına göre ayarlanır.\n\nHaftada sekiz saat ders yapılır ve gruplar beş kişiliktir. Bu mevcut, öğretmenin her öğrenciyi tek tek dinlemesine ve defterini kontrol etmesine imkân verir. Ödev takibi ve konu ilerlemesi K12 sistemi üzerinden kayıt altına alınır, veli süreci kendi panelinden izler.\n\nBu yaş grubunda çalışma alışkanlığı, konu bilgisinden daha kalıcı bir kazanımdır. Program bu yüzden düzenli ödev, temiz defter tutma ve verilen sürede işi bitirme alışkanlıklarını da ayrı bir başlık olarak takip eder.',
+    kazanimlar:['Okuduğunu anlama becerisini geliştirir.','Dört işlemde hız ve doğruluk kazanır.','Düzenli çalışma ve ödev alışkanlığı edinir.','Eksik kalan konuları geriye dönerek kapatır.','Defter düzeni ve yazı becerisini geliştirir.'],
+    program:[
+      {baslik:'Türkçe', maddeler:['Okuduğunu anlama','Sözcük dağarcığı','Yazım ve noktalama','Kısa metin yazma']},
+      {baslik:'Matematik', maddeler:['Dört işlem ve işlem hızı','Problem çözme basamakları','Geometrik şekiller','Ölçme ve zaman']},
+      {baslik:'Çalışma alışkanlığı', maddeler:['Günlük ödev takibi','Defter düzeni','Verilen sürede işi tamamlama']}
+    ],
+    sss:[
+      {s:'Hangi sınıflar katılabilir?', c:'2, 3 ve 4. sınıf öğrencilerine açıktır. Gruplar sınıf düzeyine göre ayrılır.'},
+      {s:'Ders yükü ve mevcut nedir?', c:'Haftada 8 saat ders yapılır. Grup mevcutlarımız 5 kişiliktir; ihtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir.'},
+      {s:'Ücret nasıl ödeniyor?', c:'Program ücreti aylık 7.500 TL, on ay üzerinden toplam 75.000 TL\'dir. Ödeme 10 taksit hâlinde yapılır.'},
+      {s:'Süreci nasıl takip edebilirim?', c:'Kurumumuzda K12 sistemi kullanılır. Veli, öğrenci ve öğretmen panelleri üzerinden ders takibi, ödev takibi, konu ilerlemesi ve devamsızlık takibi izlenir; bilgilendirmeler bu sistem üzerinden yapılır.'}
+    ]
+  },
+  {
+    slug:'ortaokul-destek', ad:'Ortaokul Destek Programı · 5-7. Sınıf', kategori:'temel', seviye:'Ortaokul',
+    fiyat:7500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
+    kontenjan:'5 öğrenci', oneCikan:true,
+    ozet:'Ortaokul derslerini okul müfredatıyla paralel yürüten, LGS temelini kuran destek programıdır.',
+    aciklama:'Beşinci sınıftan yedinci sınıfa kadar geçen üç yıl, LGS başarısının büyük ölçüde belirlendiği dönemdir. Sekizinci sınıfta yapılan çalışma, ancak bu üç yılın temeli sağlamsa sonuç verir. Program bu yüzden sınav odaklı değil, konu temelli ilerler.\n\nDersler okul müfredatıyla paralel yürür; öğrenci okulda yeni konuya geçmeden önce burada temelini kurar, sonra tekrarını yapar. Haftada sekiz saat ders yapılır ve gruplar beş kişiliktir. Küçük mevcut, öğrencinin soru sormaktan çekinmediği bir ortam kurar; bu yaş grubunda en sık karşılaşılan sorun, anlamadığını söyleyememektir.\n\nHer ünite sonunda tarama testi uygulanır ve yanlışlar konu bazında çıkarılır. Ödev takibi, konu ilerlemesi ve devamsızlık K12 sistemi üzerinden kayıt altına alınır; veli süreci kendi panelinden izler.',
+    kazanimlar:['Okul müfredatını geride kalmadan takip eder.','LGS için sağlam bir konu temeli kurar.','Ünite bazında eksiklerini düzenli olarak kapatır.','Soru çözme alışkanlığı ve hızı kazanır.','Düzenli çalışma disiplini edinir.'],
+    program:[
+      {baslik:'Sayısal dersler', maddeler:['Matematik · konu anlatımı ve soru çözümü','Fen Bilimleri · kavram temelli çalışma','Ünite sonu tarama testleri']},
+      {baslik:'Sözel dersler', maddeler:['Türkçe · paragraf ve dil bilgisi','Sosyal Bilgiler','Okuma ve anlama çalışmaları']},
+      {baslik:'Takip', maddeler:['Ünite bazında yanlış analizi','Ödev ve konu ilerlemesi takibi','Dönemlik veli görüşmesi']}
+    ],
+    sss:[
+      {s:'Hangi sınıflar katılabilir?', c:'5, 6 ve 7. sınıf öğrencilerine açıktır. Gruplar sınıf düzeyine göre ayrılır. 8. sınıf öğrencileri için LGS Hazırlık Programı yürütülür.'},
+      {s:'Ders yükü ve mevcut nedir?', c:'Haftada 8 saat ders yapılır. Grup mevcutlarımız 5 kişiliktir; ihtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir.'},
+      {s:'Ücret nasıl ödeniyor?', c:'Program ücreti aylık 7.500 TL, on ay üzerinden toplam 75.000 TL\'dir. Ödeme 10 taksit hâlinde yapılır.'},
+      {s:'Süreci nasıl takip edebilirim?', c:'Kurumumuzda K12 sistemi kullanılır. Veli, öğrenci ve öğretmen panelleri üzerinden ders takibi, ödev takibi, konu ilerlemesi ve devamsızlık takibi izlenir; bilgilendirmeler bu sistem üzerinden yapılır.'}
+    ]
+  },
   {
     slug:'lgs-hazirlik-8-sinif', ad:'LGS Hazırlık Programı · 8. Sınıf', kategori:'lgs', seviye:'İleri',
     fiyat:7500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
@@ -1266,7 +1305,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-ingilizce', ad:'İngilizce Özel Ders', kategori:'ozel-ders', seviye:'Tüm seviyeler',
-    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:true,
     ozet:'Öğrencinin kendi hızında ilerleyen bire bir İngilizce dersidir.',
     aciklama:'Ders, öğrencinin okulda gördüğü müfredatla uyumlu ilerler ancak temposu tamamen ona göre ayarlanır. Kelime, dil bilgisi, okuma ve konuşma dört ayrı beceri olarak takip edilir. Konuşmaktan çekinen öğrenciler için ders, bire bir ortamın verdiği rahatlıkla en çok bu beceride fark yaratır. Her ders sonunda öğretmen kısa bir ilerleme notu tutar.',
@@ -1283,7 +1322,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-matematik', ad:'Matematik Özel Ders', kategori:'ozel-ders', seviye:'Tüm seviyeler',
-    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:true,
     ozet:'Eksik konuların tek tek kapatıldığı bire bir matematik dersidir.',
     aciklama:'Matematikte bir konudaki eksik, sonraki konuları da doğrudan etkiler. Ders bu yüzden bir seviye tespitiyle başlar; geriye dönük eksikler çıkarılır ve öncelik sırasına konur. Öğrenci soru çözerken öğretmen yanındadır, bu sayede yanlış alışkanlıklar daha yerleşmeden düzeltilir. İşlem hızı ve dikkat hataları ayrı bir başlık olarak çalışılır.',
@@ -1300,7 +1339,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-fen', ad:'Fen Bilimleri Özel Ders', kategori:'ozel-ders', seviye:'Tüm seviyeler',
-    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Kavram temelli ilerleyen bire bir fen bilimleri dersidir.',
     aciklama:'Fen bilimlerinde ezber, sınav sorularında hızla yetersiz kalır. Ders bu yüzden kavramların günlük hayattaki karşılığı üzerinden yürür. Deney düzenekleri, grafik okuma ve yorum soruları ayrı ayrı çalışılır. Öğrencinin zorlandığı ünite tespit edilerek zamanın büyük bölümü oraya ayrılır.',
@@ -1317,7 +1356,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-turkce', ad:'Türkçe Özel Ders', kategori:'ozel-ders', seviye:'Tüm seviyeler',
-    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Paragraf ve anlama becerisine odaklanan bire bir Türkçe dersidir.',
     aciklama:'Türkçe netleri çoğu öğrencide dil bilgisinden değil, paragrafı anlamamaktan düşer. Ders bu yüzden okuma ve anlama üzerine kurulur. Öğrenci parçayı öğretmenle birlikte çözümler, hangi soruda neden yanıldığını görür. Dil bilgisi konuları ise okuma çalışmalarının içine yedirilerek işlenir.',
@@ -1334,7 +1373,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-inkilap', ad:'T.C. İnkılap Tarihi Özel Ders', kategori:'ozel-ders', seviye:'8. sınıf',
-    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Sekizinci sınıf İnkılap Tarihi dersine yönelik bire bir çalışmadır.',
     aciklama:'İnkılap Tarihi, olayların birbirini nasıl doğurduğu anlaşılmadan ezberlendiğinde hem zor hem de kalıcılığı düşük bir derse dönüşür. Ders, olayları neden-sonuç ilişkisiyle bir çizgi üzerine yerleştirerek ilerler. Harita ve görsel yorumlama soruları ayrı olarak çalışılır.',
@@ -1351,7 +1390,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-din', ad:'Din Kültürü Özel Ders', kategori:'ozel-ders', seviye:'8. sınıf',
-    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Sekizinci sınıf Din Kültürü ve Ahlak Bilgisi dersine yönelik bire bir çalışmadır.',
     aciklama:'Din Kültürü, net kaybetmesi en kolay derslerden biridir çünkü öğrenciler konuyu bildiklerini varsayarak tekrar etmez. Ders, ünite bazında kısa tekrarlar ve bol soru çözümü üzerine kurulur. Kavramlar tablo hâline getirilerek sınav öncesi tekrarı kolaylaştırılır.',
@@ -1451,6 +1490,26 @@ const kacar = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'
    alanını ekleyin; o kursta sahne yerine fotoğraf gösterilir.
 ------------------------------------------------------------------- */
 const SAHNE = {
+  'ilkokul-destek':`
+    <rect x="66" y="150" width="54" height="54" rx="10" fill="#FFC93C" opacity=".95"/>
+    <rect x="130" y="150" width="54" height="54" rx="10" fill="#fff" opacity=".55"/>
+    <rect x="98" y="92" width="54" height="54" rx="10" fill="#fff" opacity=".8"/>
+    <path d="M228 60h108a12 12 0 0112 12v112a12 12 0 01-12 12H228a12 12 0 01-12-12V72a12 12 0 0112-12z" fill="#fff" opacity=".9"/>
+    <g stroke="#0B4C74" stroke-width="4.4" stroke-linecap="round" opacity=".38">
+      <path d="M244 92h76M244 118h76M244 144h50"/>
+    </g>
+    <circle cx="282" cy="176" r="10" fill="#FFC93C"/>
+    <path d="M40 216h320" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity=".45"/>`,
+  'ortaokul-destek':`
+    <rect x="72" y="168" width="150" height="22" rx="6" fill="#fff" opacity=".9"/>
+    <rect x="84" y="140" width="126" height="22" rx="6" fill="#fff" opacity=".68"/>
+    <rect x="96" y="112" width="102" height="22" rx="6" fill="#FFC93C" opacity=".92"/>
+    <path d="M258 74h84a12 12 0 0112 12v104a12 12 0 01-12 12h-84a12 12 0 01-12-12V86a12 12 0 0112-12z" fill="#fff" opacity=".88"/>
+    <g stroke="#0B4C74" stroke-width="4" stroke-linecap="round" opacity=".36">
+      <path d="M270 104h60M270 128h60M270 152h40"/>
+    </g>
+    <path d="M266 178l8 9 16-19" fill="none" stroke="#0AA3DD" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+    <path d="M40 214h320" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity=".45"/>`,
   'lgs-hazirlik-8-sinif':`
     <circle cx="300" cy="80" r="46" fill="none" stroke="#fff" stroke-width="3" opacity=".30"/>
     <circle cx="300" cy="80" r="29" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
@@ -1593,6 +1652,10 @@ const SAHNE = {
 
 /* Kurs sahnesi yoksa kategori sahnesi kullanılır */
 const SAHNE_KATEGORI = {
+  temel:`
+    <rect x="96" y="150" width="60" height="56" rx="10" fill="#FFC93C" opacity=".92"/>
+    <rect x="168" y="118" width="60" height="88" rx="10" fill="#fff" opacity=".6"/>
+    <rect x="240" y="86" width="60" height="120" rx="10" fill="#fff" opacity=".85"/>`,
   yks:`
     <path d="M120 70c26-16 54-18 80-6v122c-26-12-54-10-80 6z" fill="#fff" opacity=".9"/>
     <path d="M280 70c-26-16-54-18-80-6v122c26-12 54-10 80 6z" fill="#fff" opacity=".65"/>
@@ -1629,6 +1692,7 @@ function kapakIci(k){
 function ikon(katId){
   const yollar = {
     lgs:'<path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 10v6"/>',
+    temel:'<path d="M4 6.5A2.5 2.5 0 016.5 4H11v16H6.5A2.5 2.5 0 014 17.5z"/><path d="M20 6.5A2.5 2.5 0 0017.5 4H13v16h4.5a2.5 2.5 0 002.5-2.5z"/><path d="M7 9h2M15 9h2M7 13h2M15 13h2"/>',
     yks:'<path d="M4 5h11a3 3 0 013 3v11a3 3 0 00-3-3H4z"/><path d="M20 5h-1a3 3 0 00-3 3v11a3 3 0 013-3h1z"/><path d="M8 9h6M8 12h6"/>',
     kocluk:'<circle cx="12" cy="12" r="9"/><path d="M15 9l-2.2 5.2L8 16l2-5z"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/>',
     'ozel-ders':'<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M7 11v5c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-5"/>',
@@ -1638,7 +1702,7 @@ function ikon(katId){
   return `<svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${yollar[katId]||yollar.akademik}</svg>`;
 }
 function kapakZemin(katId){
-  const acilar = {lgs:'160deg', yks:'190deg', kocluk:'285deg', 'ozel-ders':'135deg', gelisim:'315deg', kamp:'250deg'};
+  const acilar = {temel:'120deg', lgs:'160deg', yks:'190deg', kocluk:'285deg', 'ozel-ders':'135deg', gelisim:'315deg', kamp:'250deg'};
   return `background:linear-gradient(${acilar[katId]||'315deg'},#0B4C74 0%,#0A8CC4 45%,#0AA3DD 75%,#4FC9EC 100%)`;
 }
 
@@ -1995,9 +2059,11 @@ yonlendir();
 /* Ödemeye açık programlar: slug -> gösterilecek ad ve fiyat.
    Sunucudaki liste ile bire bir aynı olmalıdır. */
 const ODENEBILIR = [
-  {kod:'lgs-8', ad:'LGS Hazırlık Programı · 8. Sınıf', tutar:7500, birim:'aylık'}
-  /* Diğer programların fiyatı belirlenince buraya eklenecek. Örnek:
-     ,{kod:'ozel-ders-ingilizce', ad:'İngilizce Özel Ders', tutar:600, birim:'ders saati', saatlik:true}
+  {kod:'ilkokul',   ad:'İlkokul Destek Programı · 2-4. Sınıf',  tutar:7500, birim:'aylık'},
+  {kod:'ortaokul',  ad:'Ortaokul Destek Programı · 5-7. Sınıf', tutar:7500, birim:'aylık'},
+  {kod:'lgs-8',     ad:'LGS Hazırlık Programı · 8. Sınıf',      tutar:7500, birim:'aylık'},
+  {kod:'ozel-ders', ad:'Bire Bir Özel Ders',                    tutar:1250, birim:'ders saati', saatlik:true}
+  /* Fiyatı belirlenmeyen programlar listede yer almaz.
      Eklediğiniz her satırın karşılığını api/paytr-token.js içindeki
      FIYATLAR listesine de yazmayı unutmayın. */
 ];
