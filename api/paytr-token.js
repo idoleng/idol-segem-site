@@ -21,11 +21,12 @@ const crypto = require('crypto');
    listesiyle aynı tutulmalıdır.
 ------------------------------------------------------------- */
 const FIYATLAR = {
-  'lgs-8': { ad: 'LGS Hazirlik Programi 8. Sinif', tutar: 7500, saatlik: false }
-  /* Diger programlarin fiyati belirlenince buraya eklenecek. Ornek:
-     ,'ozel-ders-ingilizce': { ad: 'Ingilizce Ozel Ders', tutar: 600, saatlik: true }
-     Buradaki kod ve tutarlar, index.html icindeki ODENEBILIR
-     listesiyle birebir ayni olmalidir. Tahsil edilen tutar
+  'ilkokul':   { ad: 'Ilkokul Destek Programi 2-4. Sinif',  tutar: 7500, saatlik: false },
+  'ortaokul':  { ad: 'Ortaokul Destek Programi 5-7. Sinif', tutar: 7500, saatlik: false },
+  'lgs-8':     { ad: 'LGS Hazirlik Programi 8. Sinif',      tutar: 7500, saatlik: false },
+  'ozel-ders': { ad: 'Bire Bir Ozel Ders',                  tutar: 1250, saatlik: true  }
+  /* Buradaki kod ve tutarlar, index.html icindeki ODENEBILIR
+     listesiyle bire bir ayni olmalidir. Tahsil edilen tutar
      DAIMA bu listeden hesaplanir. */
 };
 
