@@ -256,6 +256,7 @@ input,select,textarea{font:inherit}
 .fiyat{display:flex; align-items:baseline; gap:9px}
 .fiyat b{font-family:'Montserrat',sans-serif; font-weight:900; font-size:21px; letter-spacing:-.03em; color:var(--murekkep)}
 .fiyat s{font-size:14px; color:var(--gri-acik)}
+.fiyat-alt{display:block; margin-top:5px; font-size:12.5px; font-weight:600; color:var(--turkuaz-koyu)}
 .fiyat small{font-size:12px; color:var(--gri-acik); font-weight:600}
 .kart-ok{width:38px; height:38px; border-radius:50%; background:var(--krem); display:flex; align-items:center; justify-content:center; color:var(--mavi-derin); flex-shrink:0; transition:background .18s,color .18s}
 .kart:hover .kart-ok{background:var(--turkuaz); color:#fff}
@@ -364,6 +365,16 @@ ul.temiz{list-style:none; padding:0; margin:0}
 .kayit-fiyat{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
 .kayit-fiyat b{font-family:'Montserrat',sans-serif; font-weight:900; font-size:34px; letter-spacing:-.04em}
 .kayit-fiyat s{color:var(--gri-acik); font-size:17px}
+.odeme-tablo{margin-top:16px; border:1px solid var(--cizgi); border-radius:var(--r-s); overflow:hidden}
+.ot-satir{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 15px; font-size:14px; color:var(--gri)}
+.ot-satir>span{display:flex; align-items:center; gap:7px; flex-wrap:nowrap}
+.ot-satir b{white-space:nowrap}
+.ot-satir+.ot-satir{border-top:1px solid var(--cizgi)}
+.ot-satir b{font-family:'Montserrat',sans-serif; font-weight:800; font-size:16px; color:var(--murekkep)}
+.ot-vurgu{background:rgba(255,201,60,.16)}
+.ot-vurgu b{color:var(--turkuaz-koyu)}
+.ot-vurgu i{font-style:normal; font-weight:800; font-size:11.5px; color:#7A5600; background:rgba(255,201,60,.55); border-radius:999px; padding:2px 7px; white-space:nowrap}
+.ot-not{padding:11px 15px; background:var(--kum); font-size:12.5px; line-height:1.5; color:var(--gri-acik); border-top:1px solid var(--cizgi)}
 .kayit-rozet{display:inline-block; background:rgba(255,201,60,.28); color:#8A6200; font-size:12px; font-weight:800; padding:4px 10px; border-radius:999px; margin-top:10px; letter-spacing:.03em}
 .kayit-liste{list-style:none; padding:0; margin:22px 0}
 .kayit-liste li{display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px dashed var(--cizgi); font-size:14.5px}
@@ -1281,7 +1292,7 @@ const KATEGORILER = [
 const KURSLAR = [
   {
     slug:'ilkokul-destek', ad:'İlkokul Destek Programı · 2-4. Sınıf', kategori:'temel', seviye:'İlkokul',
-    fiyat:7500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 5 saat',
+    fiyat:7500, eskiFiyat:null, toplam:75000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 5 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'İlkokul öğrencilerinin temel becerilerini sağlamlaştıran haftalık destek programıdır.',
     aciklama:'İlkokul yıllarında kazanılmayan bir beceri, sonraki yıllarda kendiliğinden kapanmaz; aksine üstüne konan her konu daha zor gelir. Bu program, okuma-anlama ve dört işlem becerisini bir bütün olarak ele alır. Öğrenci okulda ne işliyorsa program onunla paralel ilerler, ancak tempo öğrencinin kendi hızına göre ayarlanır.\n\nHaftada beş saat ders yapılır ve gruplar beş kişiliktir. Bu mevcut, öğretmenin her öğrenciyi tek tek dinlemesine ve defterini kontrol etmesine imkân verir. Ödev takibi ve konu ilerlemesi K12 sistemi üzerinden kayıt altına alınır, veli süreci kendi panelinden izler.\n\nBu yaş grubunda çalışma alışkanlığı, konu bilgisinden daha kalıcı bir kazanımdır. Program bu yüzden düzenli ödev, temiz defter tutma ve verilen sürede işi bitirme alışkanlıklarını da ayrı bir başlık olarak takip eder.',
@@ -1300,7 +1311,7 @@ const KURSLAR = [
   },
   {
     slug:'ortaokul-destek', ad:'Ortaokul Destek Programı · 5-7. Sınıf', kategori:'temel', seviye:'Ortaokul',
-    fiyat:9500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
+    fiyat:9500, eskiFiyat:null, toplam:95000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'Ortaokul derslerini okul müfredatıyla paralel yürüten, LGS temelini kuran destek programıdır.',
     aciklama:'Beşinci sınıftan yedinci sınıfa kadar geçen üç yıl, LGS başarısının büyük ölçüde belirlendiği dönemdir. Sekizinci sınıfta yapılan çalışma, ancak bu üç yılın temeli sağlamsa sonuç verir. Program bu yüzden sınav odaklı değil, konu temelli ilerler.\n\nDersler okul müfredatıyla paralel yürür; öğrenci okulda yeni konuya geçmeden önce burada temelini kurar, sonra tekrarını yapar. Haftada sekiz saat ders yapılır ve gruplar beş kişiliktir. Küçük mevcut, öğrencinin soru sormaktan çekinmediği bir ortam kurar; bu yaş grubunda en sık karşılaşılan sorun, anlamadığını söyleyememektir.\n\nHer ünite sonunda tarama testi uygulanır ve yanlışlar konu bazında çıkarılır. Ödev takibi, konu ilerlemesi ve devamsızlık K12 sistemi üzerinden kayıt altına alınır; veli süreci kendi panelinden izler.',
@@ -1319,7 +1330,7 @@ const KURSLAR = [
   },
   {
     slug:'lgs-hazirlik-8-sinif', ad:'LGS Hazırlık Programı · 8. Sınıf', kategori:'lgs', seviye:'İleri',
-    fiyat:9500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
+    fiyat:9500, eskiFiyat:null, toplam:95000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'Sekizinci sınıf öğrencilerini LGS\'ye hazırlayan tam kapsamlı yıllık programdır.',
     aciklama:'Program, altı dersin tamamını konu sırasına göre işler ve iki haftada bir yapılan denemelerle ilerlemeyi ölçer. Her deneme sonrası öğrenciyle bire bir analiz görüşmesi yapılır, eksik konular için ek etüt planlanır. Veliye her ay yazılı gelişim raporu iletilir.',
@@ -1341,7 +1352,7 @@ const KURSLAR = [
   },
   {
     slug:'tyt-ayt-turkce-edebiyat', ad:'TYT-AYT Türkçe ve Edebiyat', kategori:'yks', seviye:'Lise',
-    fiyat:7500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran', ders:'Haftada 4 saat',
+    fiyat:7500, eskiFiyat:null, toplam:75000, taksit:10, pesin:64000, periyot:'aylık', sure:'Eylül-Haziran', ders:'Haftada 4 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'TYT Türkçe ve AYT Edebiyat; öğrencinin ihtiyacına göre ayrı ayrı ya da birlikte alınabilen sınav hazırlık dersidir.',
     aciklama:'YKS\'de Türkçe, en çok soru içeren ve sıralamayı en hızlı değiştiren derstir. Program iki koldan oluşur: TYT tarafında paragraf ve dil bilgisi, AYT tarafında edebiyat tarihi ve metin incelemesi.\n\nİki kolun birlikte alınması zorunlu değildir. Öğrenci yalnızca TYT Türkçe ya da yalnızca AYT Edebiyat alabilir; ders, öğrencinin bölüm hedefine ve eksiğine göre tanımlanır. Sayısal ve eşit ağırlık öğrencileri genellikle TYT Türkçe ile ilerler, sözel öğrencileri ise iki kolu birlikte yürütür. Hangi kolun alınacağı kayıt görüşmesindeki seviye tespitinden sonra birlikte belirlenir.\n\nParagraf, ezberlenerek değil düzenli çözümle gelişen bir beceri olduğu için her hafta belirli sayıda parça birlikte çözümlenir. Edebiyat tarafında dönemler, akımlar ve yazarlar bir çizgi üzerine yerleştirilir; ezber yerine bağlantı kurulur. Deneme sonrasında yanlışlar konu bazında çıkarılır ve tekrar planı buna göre güncellenir.\n\nGrup mevcudu 5 öğrencidir. Velilerimizle K12 sistemi üzerinden iletişime geçiyor, ayrıca haftalık veli görüşmeleri yapıyoruz.',
@@ -1362,7 +1373,7 @@ const KURSLAR = [
   },
   {
     slug:'egitim-koclugu', ad:'Eğitim Koçluğu Programı', kategori:'kocluk', seviye:'Tüm seviyeler',
-    fiyat:7500, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 1 görüşme',
+    fiyat:7500, eskiFiyat:null, toplam:75000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 1 görüşme',
     kontenjan:'1 öğrenci', oneCikan:true,
     ozet:'Öğrencinin çalışma planını kuran ve haftalık görüşmelerle takip eden bireysel programdır.',
     aciklama:'Çoğu öğrenci ders bilgisi eksikliğinden değil, ne zaman neyi çalışacağını bilmediğinden geri kalır. Koçluk programı bir rehber öğretmen eşliğinde yürür ve öğrencinin haftalık çalışma planını birlikte kurmakla başlar. Her hafta yapılan görüşmede geçen haftanın planı gözden geçirilir, aksayan yerler konuşulur ve yeni hafta planlanır. Deneme sonuçları grafik hâlinde takip edilir. Sınav kaygısı, motivasyon ve zaman yönetimi görüşmelerin düzenli başlıklarıdır. Veli, ayda bir yazılı gelişim raporu alır.',
@@ -1811,6 +1822,7 @@ function kursKarti(k){
         ${k.fiyat&&k.eskiFiyat?`<s>${paraFmt(k.eskiFiyat)} ₺</s>`:''}
         <small>${kacar(k.periyot)}</small>
       </span>
+      ${odemeOzeti(k)}
       <span class="kart-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </div>
   </a>`;
@@ -1973,9 +1985,9 @@ function detayCiz(slug){
         <div class="kayit-kart">
           <div class="kayit-fiyat">
             ${k.fiyat?`<b>${paraFmt(k.fiyat)} ₺</b>`:`<b style="font-size:24px">Fiyat için bilgi alın</b>`}
-            ${k.fiyat&&k.eskiFiyat?`<s>${paraFmt(k.eskiFiyat)} ₺</s>`:''}
             <small style="color:var(--gri-acik); font-weight:600">${kacar(k.periyot)}</small>
           </div>
+          ${odemeTablosu(k)}
           ${indirim?`<span class="kayit-rozet">Erken kayıt indirimi uygulanmıştır</span>`:''}
           <ul class="kayit-liste">
             <li><span>Kategori</span><b>${kacar(K.ad)}</b></li>
@@ -2331,6 +2343,36 @@ function cerezTercihleriniAc(){
   cerezKaydet('');
   document.querySelectorAll('.cerez-bant').forEach(b=>b.remove());
   cerezBandiKur();
+}
+
+
+/* ---- Ödeme özeti -------------------------------------------------
+   Kartta ve kurs detayında taksitli / peşin ayrımını gösterir.
+   Bir kursta `pesin` alanı tanımlıysa peşin tutar da yazılır.
+------------------------------------------------------------------- */
+function odemeOzeti(k){
+  if(!k.fiyat || !k.toplam) return '';
+  const parcalar = [`${k.taksit} taksit · ${paraFmt(k.toplam)} ₺`];
+  if(k.pesin) parcalar.push(`peşin ${paraFmt(k.pesin)} ₺`);
+  return `<span class="fiyat-alt">${parcalar.join(' &middot; ')}</span>`;
+}
+
+function odemeTablosu(k){
+  if(!k.fiyat || !k.toplam) return '';
+  const indirim = k.pesin ? Math.round((1 - k.pesin / k.toplam) * 100) : 0;
+  return `
+    <div class="odeme-tablo">
+      <div class="ot-satir">
+        <span>${k.taksit} taksitli toplam</span>
+        <b>${paraFmt(k.toplam)} ₺</b>
+      </div>
+      ${k.pesin ? `
+      <div class="ot-satir ot-vurgu">
+        <span>Peşin ödeme${indirim ? ` <i>%${indirim}</i>` : ''}</span>
+        <b>${paraFmt(k.pesin)} ₺</b>
+      </div>` : ''}
+      <p class="ot-not">Ödemeler banka havalesi ile alınır. IBAN bilgisi için WhatsApp'tan yazın.</p>
+    </div>`;
 }
 
 </script>
