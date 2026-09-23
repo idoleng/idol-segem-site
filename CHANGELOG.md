@@ -108,3 +108,44 @@ commit — henüz push edilmediyse `eff3aec`.
   görünebildiği durumlarda, aynı kurs hangi sayfadan açılırsa ona göre
   fiyatlı ya da fiyatsız gösteriliyor; kurs verisi tek, yalnızca
   görünüm sayfaya göre değişiyor.
+
+## v5 — 2026-09-23
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `ce5593c`
+
+### Neden
+Kurum bir SEGEM'dir (Sosyal Etkinlik ve Gelişim Merkezi); ilkokul ve
+ortaokul düzeyinde hizmet verir, lise / TYT-AYT / YKS öğrencilerine
+akademik ders veremez. Olası bir denetimde sitenin bu kapsamla birebir
+uyumlu olması için lise düzeyini çağrıştıran her şey kaldırıldı.
+
+> Not: v1'de TYT-AYT kaldırılmıştı, ancak sonradan GitHub'a elle
+> yüklenen `index.html` ("Add files via upload") TYT-AYT içeriğini geri
+> getirmişti. Bu sürüm onu yeniden ve eksiksiz temizler.
+
+### Kaldırılanlar
+- **TYT-AYT Türkçe ve Edebiyat** kursu (kart, detay sayfası, SSS, fiyat).
+- **TYT-AYT Hazırlık** kategorisi, kapak illüstrasyonu, ikonu ve renk açısı.
+- Ödeme sayfası (`ODENEBILIR`) listesindeki `tyt-ayt` kaydı.
+- İletişim formundaki sınıf seçiminden **Lise** seçeneği.
+
+### Metin güncellemeleri ("LGS ve TYT-AYT hazırlık" → "LGS hazırlık")
+- Sayfa başlığı (`<title>`), Google açıklaması, WhatsApp/Facebook ve
+  Twitter paylaşım açıklamaları, Google yapısal verisi (JSON-LD).
+- Ana sayfa giriş metni: "İlkokuldan liseye" → "İlkokuldan ortaokula".
+- Kurslar sayfası açıklaması, footer tanıtım metni, "Sınav Grupları"
+  ekip kartı.
+
+### Seviye etiketleri netleştirildi
+Kartlarda "Tüm seviyeler" yazan akademik programlar, lise öğrencisi de
+alınıyormuş gibi okunabildiği için gerçek sınıf aralığıyla değiştirildi
+(aralıklar programların kendi SSS'lerinden alındı):
+- İngilizce, Matematik, Türkçe Özel Ders → **4-8. sınıf**
+- Fen Bilimleri Özel Ders → **5-8. sınıf**
+- Eğitim Koçluğu, Bilişsel Beceriler, Yaz Dönemi Kampı → **İlkokul-Ortaokul**
+- AHOB Anlayarak Hızlı Okuma "Tüm seviyeler" olarak bırakıldı (akademik
+  ders değil, yetişkinlere de açık bir gelişim programı).
+
+### Eski bağlantılar
+`#/kurs/tyt-ayt-turkce-edebiyat` adresi artık "Bu kurs bulunamadı"
+sayfasını gösterir.
