@@ -22,8 +22,9 @@ const crypto = require('crypto');
 ------------------------------------------------------------- */
 const FIYATLAR = {
   'ilkokul':   { ad: 'Ilkokul Destek Programi 2-4. Sinif',  tutar: 7500, saatlik: false },
-  'ortaokul':  { ad: 'Ortaokul Destek Programi 5-7. Sinif', tutar: 7500, saatlik: false },
-  'lgs-8':     { ad: 'LGS Hazirlik Programi 8. Sinif',      tutar: 7500, saatlik: false },
+  'ortaokul':  { ad: 'Ortaokul Destek Programi 5-7. Sinif', tutar: 9500, saatlik: false },
+  'lgs-8':     { ad: 'LGS Hazirlik Programi 8. Sinif',      tutar: 9500, saatlik: false },
+  'kocluk':    { ad: 'Egitim Koclugu Programi',             tutar: 7500, saatlik: false },
   'ozel-ders': { ad: 'Bire Bir Ozel Ders',                  tutar: 1250, saatlik: true  }
   /* Buradaki kod ve tutarlar, index.html icindeki ODENEBILIR
      listesiyle bire bir ayni olmalidir. Tahsil edilen tutar

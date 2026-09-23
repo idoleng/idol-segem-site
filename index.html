@@ -604,8 +604,8 @@ ul.temiz{list-style:none; padding:0; margin:0}
   <div class="ist bolum-sik">
     <div class="kap">
       <div class="ist-grid" id="ist-grid">
-        <div class="ist-kutu"><div class="ist-sayi" data-sayac="5000" data-son="+">0</div><div class="ist-etiket">Mezun öğrenci</div></div>
-        <div class="ist-kutu"><div class="ist-sayi" data-sayac="14" data-son="">0</div><div class="ist-etiket">Aktif program</div></div>
+        <div class="ist-kutu"><div class="ist-sayi" data-sayac="5000" data-son="+">0</div><div class="ist-etiket">Öğrenci yetiştirdik</div></div>
+        <div class="ist-kutu"><div class="ist-sayi" id="ist-program" data-sayac="17" data-son="">0</div><div class="ist-etiket">Aktif program</div></div>
         <div class="ist-kutu"><div class="ist-sayi" data-sayac="5" data-son="">0</div><div class="ist-etiket">Grup başına öğrenci</div></div>
       </div>
     </div>
@@ -1901,6 +1901,9 @@ function anaSayfayiKur(){
 
 /* ---- Sayaç animasyonu --------------------------------------------- */
 function sayaclariBaslat(){
+  /* "Aktif program" sayısı elle değil, KURSLAR listesinden gelir */
+  const programSayac = $('#ist-program');
+  if(programSayac) programSayac.dataset.sayac = KURSLAR.length;
   const kutular = $$('[data-sayac]');
   if(!kutular.length) return;
   const azHareket = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -149,3 +149,21 @@ alınıyormuş gibi okunabildiği için gerçek sınıf aralığıyla değiştir
 ### Eski bağlantılar
 `#/kurs/tyt-ayt-turkce-edebiyat` adresi artık "Bu kurs bulunamadı"
 sayfasını gösterir.
+
+## v6 — 2026-09-23
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `3032064` (v5)
+
+### Değişenler
+- Ana sayfa istatistiği: "5000+ Mezun öğrenci" → "5000+ Öğrenci yetiştirdik"
+  ("mezun" ifadesi lise mezunu gibi anlaşılabildiği için).
+- "Aktif program" sayısı artık elle yazılmıyor; `KURSLAR` listesindeki kurs
+  sayısından otomatik hesaplanıyor (eskiden 14 yazıyordu, gerçekte 17).
+
+### Düzeltilen sorun (v1'den beri açıktı)
+`api/paytr-token.js` içindeki `FIYATLAR` listesi, sitede gösterilen fiyatlarla
+eşitlendi. Sitedeki kurs kartı, SSS ve ödeme sayfasındaki tutarlar esas alındı:
+- Ortaokul Destek: 7.500 → **9.500 TL**
+- LGS 8. Sınıf: 7.500 → **9.500 TL**
+- Eğitim Koçluğu (`kocluk`) eklendi: **7.500 TL** — önceden seçilip ödeme
+  denendiğinde "Geçersiz program seçimi" hatası veriyordu.
