@@ -167,3 +167,34 @@ eşitlendi. Sitedeki kurs kartı, SSS ve ödeme sayfasındaki tutarlar esas alı
 - LGS 8. Sınıf: 7.500 → **9.500 TL**
 - Eğitim Koçluğu (`kocluk`) eklendi: **7.500 TL** — önceden seçilip ödeme
   denendiğinde "Geçersiz program seçimi" hatası veriyordu.
+## v7 — 2026-09-23
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `ffe7f07` (v6)
+
+### Tüm fiyatlar siteden kaldırıldı
+Kurum kararıyla sitede hiçbir fiyat, taksit, peşin ödeme veya indirim
+bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
+`ffe7f07` commit'inde duruyor.
+
+- `KURSLAR`: tüm kurslarda `fiyat:null`; `toplam`, `taksit`, `pesin`
+  alanları silindi. Kartlarda "Bilgi alın", kurs sayfasında "Fiyat için
+  bilgi alın" yazıyor; yanındaki "aylık / ders saati" etiketi fiyat yokken
+  artık gösterilmiyor.
+- Kurs SSS'lerindeki "Ücret nasıl ödeniyor? — aylık X TL…" cevapları
+  "Ücret ve ödeme bilgisi nasıl alırım? — WhatsApp / telefon" olarak
+  değiştirildi (İlkokul, Ortaokul, LGS, Eğitim Koçluğu).
+- Genel SSS ve ödeme sayfasından "peşin ya da 10 taksit" ve "erken kayıt /
+  kardeş indirimi" cümleleri çıkarıldı.
+- Üst duyuru bandından "Erken kayıtta %20 indirim" ifadesi, ana sayfadaki
+  "ERKEN KAYIT · %20 İNDİRİM" çağrı kutusu ve "kardeş %25" metni kaldırıldı;
+  kutu "Yeni dönem kayıtları" olarak yeniden yazıldı.
+- `ODENEBILIR` (index.html) ve `FIYATLAR` (api/paytr-token.js) listeleri
+  boşaltıldı. Ödeme sayfası havale bilgilendirmesini gösteriyor; sunucu
+  her ödeme isteğini reddediyor.
+
+### Bilerek bırakılanlar
+- Fiyat gösterim kodu (`odemeOzeti`, `odemeTablosu`, indirim rozeti):
+  veri boş olduğu için hiçbir şey göstermiyor, fiyatlar geri eklendiğinde
+  yeniden yazmak gerekmesin diye duruyor.
+- Hukuki sayfalardaki (mesafeli satış, ön bilgilendirme, iptal-iade) genel
+  ödeme/iade maddeleri — tutar içermiyor, mevzuat metni.

@@ -544,7 +544,7 @@ ul.temiz{list-style:none; padding:0; margin:0}
 <!-- ============ ÜST DUYURU ============ -->
 <div class="duyuru">
   <div class="kap">
-    <p><b>Yeni dönem kayıtları açıktır.</b> Şehir dışından online katılabilirsiniz. Erken kayıtta %20 indirim <span data-kampanya-bitis>30 Eylül</span>'e kadar geçerlidir.</p>
+    <p><b>Yeni dönem kayıtları açıktır.</b> Şehir dışından online katılabilirsiniz.</p>
     <a href="tel:+905415669875">0541 566 98 75</a>
   </div>
 </div>
@@ -674,12 +674,12 @@ ul.temiz{list-style:none; padding:0; margin:0}
         <div class="cagri-doku kareli-beyaz"></div>
         <div class="cagri-ic">
           <div>
-            <span class="cagri-rozet">ERKEN KAYIT · %20 İNDİRİM</span>
+            <span class="cagri-rozet">YENİ DÖNEM KAYITLARI</span>
             <h2>Hemen başlayın, dönem başında öne geçin.</h2>
-            <p><span data-kampanya-bitis>30 Eylül</span>'e kadar kayıt yaptıran öğrenciler tüm programlarda %20 indirimden yararlanır. Kardeş kayıtlarında indirim %25'e çıkar. Ödemeler banka havalesi ile alınır; IBAN bilgisi için WhatsApp'tan yazmanız yeterlidir.</p>
+            <p>Ücretsiz tanışma dersine katılın, öğrencinize uygun grubu birlikte belirleyelim. Kayıt, ücret ve ödeme bilgisi için WhatsApp'tan yazmanız yeterlidir.</p>
           </div>
           <div class="cagri-dgler">
-            <a class="dg dg-sari" href="#" data-wa="Merhaba, erken kayıt indiriminden yararlanmak istiyorum. Bilgi alabilir miyim?">WhatsApp'tan kayıt ol</a>
+            <a class="dg dg-sari" href="#" data-wa="Merhaba, kayıt hakkında bilgi almak istiyorum.">WhatsApp'tan kayıt ol</a>
             <a class="dg dg-hayalet" href="tel:+905415669875">0541 566 98 75</a>
           </div>
         </div>
@@ -1303,7 +1303,7 @@ const KATEGORILER = [
 const KURSLAR = [
   {
     slug:'ilkokul-destek', ad:'İlkokul Destek Programı · 2-4. Sınıf', kategori:'temel', seviye:'İlkokul',
-    fiyat:7500, eskiFiyat:null, toplam:75000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 5 saat',
+    fiyat:null, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 5 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'İlkokul öğrencilerinin temel becerilerini sağlamlaştıran haftalık destek programıdır.',
     aciklama:'İlkokul yıllarında kazanılmayan bir beceri, sonraki yıllarda kendiliğinden kapanmaz; aksine üstüne konan her konu daha zor gelir. Bu program, okuma-anlama ve dört işlem becerisini bir bütün olarak ele alır. Öğrenci okulda ne işliyorsa program onunla paralel ilerler, ancak tempo öğrencinin kendi hızına göre ayarlanır.\n\nHaftada beş saat ders yapılır ve gruplar beş kişiliktir. Bu mevcut, öğretmenin her öğrenciyi tek tek dinlemesine ve defterini kontrol etmesine imkân verir. Ödev takibi ve konu ilerlemesi K12 sistemi üzerinden kayıt altına alınır, veli süreci kendi panelinden izler.\n\nBu yaş grubunda çalışma alışkanlığı, konu bilgisinden daha kalıcı bir kazanımdır. Program bu yüzden düzenli ödev, temiz defter tutma ve verilen sürede işi bitirme alışkanlıklarını da ayrı bir başlık olarak takip eder.',
@@ -1316,13 +1316,13 @@ const KURSLAR = [
     sss:[
       {s:'Hangi sınıflar katılabilir?', c:'2, 3 ve 4. sınıf öğrencilerine açıktır. Gruplar sınıf düzeyine göre ayrılır.'},
       {s:'Ders yükü ve mevcut nedir?', c:'Haftada 5 saat ders yapılır. Grup mevcutlarımız 5 kişiliktir; ihtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir.'},
-      {s:'Ücret nasıl ödeniyor?', c:'Program ücreti aylık 7.500 TL, on ay üzerinden toplam 75.000 TL\'dir. Ödeme 10 taksit hâlinde yapılır.'},
+      {s:'Ücret ve ödeme bilgisi nasıl alırım?', c:'Ücret ve ödeme seçenekleri için WhatsApp\'tan ya da telefonla bize ulaşabilirsiniz.'},
       {s:'Süreci nasıl takip edebilirim?', c:'Kurumumuzda K12 sistemi kullanılır. Veli, öğrenci ve öğretmen panelleri üzerinden ders takibi, ödev takibi, konu ilerlemesi ve devamsızlık takibi izlenir; bilgilendirmeler bu sistem üzerinden yapılır.'}
     ]
   },
   {
     slug:'ortaokul-destek', ad:'Ortaokul Destek Programı · 5-7. Sınıf', kategori:'temel', seviye:'Ortaokul',
-    fiyat:9500, eskiFiyat:null, toplam:95000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
+    fiyat:null, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'Ortaokul derslerini okul müfredatıyla paralel yürüten, LGS temelini kuran destek programıdır.',
     aciklama:'Beşinci sınıftan yedinci sınıfa kadar geçen üç yıl, LGS başarısının büyük ölçüde belirlendiği dönemdir. Sekizinci sınıfta yapılan çalışma, ancak bu üç yılın temeli sağlamsa sonuç verir. Program bu yüzden sınav odaklı değil, konu temelli ilerler.\n\nDersler okul müfredatıyla paralel yürür; öğrenci okulda yeni konuya geçmeden önce burada temelini kurar, sonra tekrarını yapar. Haftada sekiz saat ders yapılır ve gruplar beş kişiliktir. Küçük mevcut, öğrencinin soru sormaktan çekinmediği bir ortam kurar; bu yaş grubunda en sık karşılaşılan sorun, anlamadığını söyleyememektir.\n\nHaftalık ders programına göre Türkçe, Matematik, Fen Bilimleri, Sosyal Bilgiler ve İngilizce derslerinin her biri kendi branş öğretmeniyle işlenir. Akademik derslerin dışında etüt, yazılı çalışmaları ve deneme sınavlarıyla öğrenciler desteklenir; başarıları düzenli olarak takip edilir.\n\nHer ünite sonunda tarama testi uygulanır ve yanlışlar konu bazında çıkarılır. Ödev takibi, konu ilerlemesi ve devamsızlık K12 sistemi üzerinden kayıt altına alınır; veli süreci kendi panelinden izler.',
@@ -1335,13 +1335,13 @@ const KURSLAR = [
     sss:[
       {s:'Hangi sınıflar katılabilir?', c:'5, 6 ve 7. sınıf öğrencilerine açıktır. Gruplar sınıf düzeyine göre ayrılır. 8. sınıf öğrencileri için LGS Hazırlık Programı yürütülür.'},
       {s:'Ders yükü ve mevcut nedir?', c:'Haftada 8 saat ders yapılır. Grup mevcutlarımız 5 kişiliktir; ihtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir.'},
-      {s:'Ücret nasıl ödeniyor?', c:'Program ücreti aylık 9.500 TL, on ay üzerinden toplam 95.000 TL\'dir. Ödeme 10 taksit hâlinde yapılır.'},
+      {s:'Ücret ve ödeme bilgisi nasıl alırım?', c:'Ücret ve ödeme seçenekleri için WhatsApp\'tan ya da telefonla bize ulaşabilirsiniz.'},
       {s:'Süreci nasıl takip edebilirim?', c:'Kurumumuzda K12 sistemi kullanılır. Veli, öğrenci ve öğretmen panelleri üzerinden ders takibi, ödev takibi, konu ilerlemesi ve devamsızlık takibi izlenir; bilgilendirmeler bu sistem üzerinden yapılır.'}
     ]
   },
   {
     slug:'lgs-hazirlik-8-sinif', ad:'LGS Hazırlık Programı · 8. Sınıf', kategori:'lgs', seviye:'İleri',
-    fiyat:9500, eskiFiyat:null, toplam:95000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
+    fiyat:null, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 8 saat',
     kontenjan:'5 öğrenci', oneCikan:true,
     ozet:'Sekizinci sınıf öğrencilerini LGS\'ye hazırlayan tam kapsamlı yıllık programdır.',
     aciklama:'Program, Türkçe, Matematik, Fen Bilimleri, T.C. İnkılap Tarihi ve Atatürkçülük, Din Kültürü ve Ahlak Bilgisi ile İngilizce olmak üzere LGS kapsamındaki altı dersin tamamını konu sırasına göre işler ve iki haftada bir yapılan denemelerle ilerlemeyi ölçer. Her deneme sonrası öğrenciyle bire bir analiz görüşmesi yapılır, eksik konular için ek etüt planlanır. Veliye her ay yazılı gelişim raporu iletilir.',
@@ -1356,7 +1356,7 @@ const KURSLAR = [
       {s:'Deneme sınavları ücrete dâhil mi?', c:'Hayır. Deneme sınavları program ücretine dâhil değildir, ayrıca ücretlendirilir.'},
       {s:'Deneme sonuçları nasıl değerlendiriliyor?', c:'Deneme kitapçıkları KÖKSİS sistemiyle analiz edilir. Analiz, her öğrencinin akademik başarısına ve gelişimine uygun olarak uygulanır; sonuçlar konu bazında çıkarılarak çalışma planına yansıtılır.'},
       {s:'Öğrenci derse gelemezse ne olur?', c:'Kaçırılan dersler, kayda alınan video dersleri üzerinden izlenir. Devamsızlık, aynı gün ve ders saatinde veliye bildirilir.'},
-      {s:'Ücret nasıl ödeniyor?', c:'Program ücreti aylık 9.500 TL, on ay üzerinden toplam 95.000 TL\'dir. Ödeme 10 taksit hâlinde yapılır. Peşin ödeme seçeneği için bize yazabilirsiniz.'},
+      {s:'Ücret ve ödeme bilgisi nasıl alırım?', c:'Ücret ve ödeme seçenekleri için WhatsApp\'tan ya da telefonla bize ulaşabilirsiniz.'},
       {s:'Sınıf mevcudu kaç kişi?', c:'Grup mevcutlarımız 5 kişiliktir. İhtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir.'},
       {s:'Süreci nasıl takip edebilirim?', c:'Kurumumuzda K12 sistemi kullanılır. Veli, öğrenci ve öğretmen panelleri üzerinden ders takibi, ödev takibi, konu ilerlemesi ve devamsızlık takibi izlenir; bilgilendirmeler bu sistem üzerinden yapılır.'}
     ]
@@ -1432,7 +1432,7 @@ const KURSLAR = [
   },
   {
     slug:'egitim-koclugu', ad:'Eğitim Koçluğu Programı', kategori:'kocluk', seviye:'İlkokul-Ortaokul',
-    fiyat:7500, eskiFiyat:null, toplam:75000, taksit:10, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 1 görüşme',
+    fiyat:null, eskiFiyat:null, periyot:'aylık', sure:'Eylül-Haziran · 10 ay', ders:'Haftada 1 görüşme',
     kontenjan:'1 öğrenci', oneCikan:true,
     ozet:'Öğrencinin çalışma planını kuran ve haftalık görüşmelerle takip eden bireysel programdır.',
     aciklama:'Çoğu öğrenci ders bilgisi eksikliğinden değil, ne zaman neyi çalışacağını bilmediğinden geri kalır. Koçluk programı bir rehber öğretmen eşliğinde yürür ve öğrencinin haftalık çalışma planını birlikte kurmakla başlar. Her hafta yapılan görüşmede geçen haftanın planı gözden geçirilir, aksayan yerler konuşulur ve yeni hafta planlanır. Deneme sonuçları grafik hâlinde takip edilir. Sınav kaygısı, motivasyon ve zaman yönetimi görüşmelerin düzenli başlıklarıdır. Veli, ayda bir yazılı gelişim raporu alır.',
@@ -1447,12 +1447,12 @@ const KURSLAR = [
       {s:'Görüşmeler nerede yapılıyor?', c:'Görüşmeler merkezimizde yüz yüze yapılır. Gerektiğinde uzaktan görüşme de planlanabiliyor.'},
       {s:'Kurs öğrencisi olmayanlar katılabilir mi?', c:'Katılabilir. Başka bir kurumda ya da yalnızca okulda okuyan öğrenciler de koçluk programına kaydolabiliyor.'},
       {s:'Veli süreci nasıl takip eder?', c:'Ayda bir yazılı gelişim raporu iletilir. Rapor, planın ne kadarının uygulandığını ve deneme sonuçlarındaki değişimi gösterir.'},
-      {s:'Ücret nasıl ödeniyor?', c:'Program ücreti aylık 7.500 TL, on ay üzerinden toplam 75.000 TL\'dir. Ödeme 10 taksit hâlinde yapılır.'}
+      {s:'Ücret ve ödeme bilgisi nasıl alırım?', c:'Ücret ve ödeme seçenekleri için WhatsApp\'tan ya da telefonla bize ulaşabilirsiniz.'}
     ]
   },
   {
     slug:'ozel-ders-ingilizce', ad:'İngilizce Özel Ders', kategori:'ozel-ders', seviye:'4-8. sınıf',
-    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:true,
     ozet:'Öğrencinin kendi hızında ilerleyen bire bir İngilizce dersidir.',
     aciklama:'Ders, öğrencinin okulda gördüğü müfredatla uyumlu ilerler ancak temposu tamamen ona göre ayarlanır. Kelime, dil bilgisi, okuma ve konuşma dört ayrı beceri olarak takip edilir. Konuşmaktan çekinen öğrenciler için ders, bire bir ortamın verdiği rahatlıkla en çok bu beceride fark yaratır. Her ders sonunda öğretmen kısa bir ilerleme notu tutar.',
@@ -1469,7 +1469,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-matematik', ad:'Matematik Özel Ders', kategori:'ozel-ders', seviye:'4-8. sınıf',
-    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:true,
     ozet:'Eksik konuların tek tek kapatıldığı bire bir matematik dersidir.',
     aciklama:'Matematikte bir konudaki eksik, sonraki konuları da doğrudan etkiler. Ders bu yüzden bir seviye tespitiyle başlar; geriye dönük eksikler çıkarılır ve öncelik sırasına konur. Öğrenci soru çözerken öğretmen yanındadır, bu sayede yanlış alışkanlıklar daha yerleşmeden düzeltilir. İşlem hızı ve dikkat hataları ayrı bir başlık olarak çalışılır.',
@@ -1486,7 +1486,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-fen', ad:'Fen Bilimleri Özel Ders', kategori:'ozel-ders', seviye:'5-8. sınıf',
-    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Kavram temelli ilerleyen bire bir fen bilimleri dersidir.',
     aciklama:'Fen bilimlerinde ezber, sınav sorularında hızla yetersiz kalır. Ders bu yüzden kavramların günlük hayattaki karşılığı üzerinden yürür. Deney düzenekleri, grafik okuma ve yorum soruları ayrı ayrı çalışılır. Öğrencinin zorlandığı ünite tespit edilerek zamanın büyük bölümü oraya ayrılır.',
@@ -1503,7 +1503,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-turkce', ad:'Türkçe Özel Ders', kategori:'ozel-ders', seviye:'4-8. sınıf',
-    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Paragraf ve anlama becerisine odaklanan bire bir Türkçe dersidir.',
     aciklama:'Türkçe netleri çoğu öğrencide dil bilgisinden değil, paragrafı anlamamaktan düşer. Ders bu yüzden okuma ve anlama üzerine kurulur. Öğrenci parçayı öğretmenle birlikte çözümler, hangi soruda neden yanıldığını görür. Dil bilgisi konuları ise okuma çalışmalarının içine yedirilerek işlenir.',
@@ -1520,7 +1520,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-inkilap', ad:'T.C. İnkılap Tarihi Özel Ders', kategori:'ozel-ders', seviye:'8. sınıf',
-    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Sekizinci sınıf İnkılap Tarihi dersine yönelik bire bir çalışmadır.',
     aciklama:'İnkılap Tarihi, olayların birbirini nasıl doğurduğu anlaşılmadan ezberlendiğinde hem zor hem de kalıcılığı düşük bir derse dönüşür. Ders, olayları neden-sonuç ilişkisiyle bir çizgi üzerine yerleştirerek ilerler. Harita ve görsel yorumlama soruları ayrı olarak çalışılır.',
@@ -1537,7 +1537,7 @@ const KURSLAR = [
   },
   {
     slug:'ozel-ders-din', ad:'Din Kültürü Özel Ders', kategori:'ozel-ders', seviye:'8. sınıf',
-    fiyat:1250, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
+    fiyat:null, eskiFiyat:null, periyot:'ders saati', sure:'Esnek takvim', ders:'Haftada 1-4 saat',
     kontenjan:'1 öğrenci', oneCikan:false,
     ozet:'Sekizinci sınıf Din Kültürü ve Ahlak Bilgisi dersine yönelik bire bir çalışmadır.',
     aciklama:'Din Kültürü, net kaybetmesi en kolay derslerden biridir çünkü öğrenciler konuyu bildiklerini varsayarak tekrar etmez. Ders, ünite bazında kısa tekrarlar ve bol soru çözümü üzerine kurulur. Kavramlar tablo hâline getirilerek sınav öncesi tekrarı kolaylaştırılır.',
@@ -1614,7 +1614,7 @@ const KURSLAR = [
 const GENEL_SSS = [
   {s:'Kayıt için ne yapmam gerekiyor?', c:'WhatsApp\'tan ya da telefonla ulaşıp bir tanışma randevusu alın. Görüşmede öğrencinin seviyesini birlikte değerlendirir, uygun grubu ve ders saatlerini belirleriz. Gelibolu ve çevresindeyseniz kayıt merkezimizde, şehir dışındaysanız uzaktan tamamlanır.'},
   {s:'Ücretsiz deneme dersi var mı?', c:'Evet. Her yeni öğrenci bir tanışma dersine ücretsiz katılabilir. Dersin ardından karar vermekte özgürsünüz.'},
-  {s:'Ödeme nasıl yapılıyor?', c:'Ödemeler banka havalesi ve EFT ile, kurumumuzun IBAN numarası üzerinden alınır. Ödeme yapmak için WhatsApp\'tan bize yazmanız yeterlidir; IBAN bilgisini ve ödeme planını size iletiriz. Program ücreti peşin ya da 10 taksit hâlinde ödenebilir; erken kayıt ve kardeş indirimi peşin ödemede birleştirilebilir.'},
+  {s:'Ödeme nasıl yapılıyor?', c:'Ödemeler banka havalesi ve EFT ile, kurumumuzun IBAN numarası üzerinden alınır. Ödeme yapmak için WhatsApp\'tan bize yazmanız yeterlidir; IBAN bilgisini ve ödeme planını size iletiriz.'},
   {s:'Dersler online alınabilir mi?', c:'Alınabilir. Gelibolu ve çevresindeki öğrenciler merkezimizde yüz yüze, şehir dışındaki öğrenciler canlı ders platformumuz üzerinden derse katılır. Program, öğretmen ve ders saati her iki biçimde de aynıdır; online gruplarda da mevcut 5 kişidir ve ders kaydı sonradan tekrar izlenebilir.'},
   {s:'Online derse nasıl katılıyoruz?', c:'Ders saatinden önce size derse giriş bağlantısı iletilir. Bağlantıya bilgisayar, tablet ya da telefondan katılabilirsiniz.'},
   {s:'Grup mevcudu kaç kişi?', c:'Grup derslerinde mevcudumuz 5 kişiliktir; ihtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir. Özel ders, eğitim koçluğu ve AHOB anlayarak hızlı okuma programları ise bire bir yürütülür, bu programlarda kontenjan 1 kişidir.'},
@@ -1876,7 +1876,7 @@ function kursKarti(k){
       <span class="fiyat">
         ${gizliFiyat?`<b style="font-size:16px">Bilgi alın</b>`:(k.fiyat?`<b>${paraFmt(k.fiyat)} ₺</b>`:`<b style="font-size:16px">Bilgi alın</b>`)}
         ${!gizliFiyat&&k.fiyat&&k.eskiFiyat?`<s>${paraFmt(k.eskiFiyat)} ₺</s>`:''}
-        <small>${kacar(k.periyot)}</small>
+        ${!gizliFiyat&&k.fiyat?`<small>${kacar(k.periyot)}</small>`:''}
       </span>
       ${gizliFiyat?'':odemeOzeti(k)}
       <span class="kart-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -2052,7 +2052,7 @@ function detayCiz(slug){
         <div class="kayit-kart">
           <div class="kayit-fiyat">
             ${gizliFiyat?`<b style="font-size:24px">Fiyat için bilgi alın</b>`:(k.fiyat?`<b>${paraFmt(k.fiyat)} ₺</b>`:`<b style="font-size:24px">Fiyat için bilgi alın</b>`)}
-            <small style="color:var(--gri-acik); font-weight:600">${kacar(k.periyot)}</small>
+            ${!gizliFiyat&&k.fiyat?`<small style="color:var(--gri-acik); font-weight:600">${kacar(k.periyot)}</small>`:''}
           </div>
           ${gizliFiyat?'':odemeTablosu(k)}
           ${indirim?`<span class="kayit-rozet">Erken kayıt indirimi uygulanmıştır</span>`:''}
@@ -2265,13 +2265,11 @@ yonlendir();
 ------------------------------------------------------------------- */
 
 /* Ödemeye açık programlar: slug -> gösterilecek ad ve fiyat.
-   Sunucudaki liste ile bire bir aynı olmalıdır. */
+   Sunucudaki liste ile bire bir aynı olmalıdır.
+   Şu an fiyatlar siteden kaldırıldığı için liste boş; boşken ödeme
+   sayfası havale bilgilendirmesini gösterir. Satır biçimi:
+   {kod:'ilkokul', ad:'İlkokul Destek Programı · 2-4. Sınıf', tutar:0, birim:'aylık'} */
 const ODENEBILIR = [
-  {kod:'ilkokul',   ad:'İlkokul Destek Programı · 2-4. Sınıf',  tutar:7500, birim:'aylık'},
-  {kod:'ortaokul',  ad:'Ortaokul Destek Programı · 5-7. Sınıf', tutar:9500, birim:'aylık'},
-  {kod:'lgs-8',     ad:'LGS Hazırlık Programı · 8. Sınıf',      tutar:9500, birim:'aylık'},
-  {kod:'kocluk',    ad:'Eğitim Koçluğu Programı',                tutar:7500, birim:'aylık'},
-  {kod:'ozel-ders', ad:'Bire Bir Özel Ders',                    tutar:1250, birim:'ders saati', saatlik:true}
   /* Fiyatı belirlenmeyen programlar listede yer almaz.
      Eklediğiniz her satırın karşılığını api/paytr-token.js içindeki
      FIYATLAR listesine de yazmayı unutmayın. */
@@ -2285,7 +2283,6 @@ function odemeKur(){
     $('#odeme-form-alan').innerHTML =
       '<h2>Ödeme, banka havalesi ile alınır</h2>' +
       '<p>Program ücretlerini kurumumuzun IBAN numarasına havale ya da EFT yoluyla ödeyebilirsiniz. Ödeme yapmak için WhatsApp\'tan bize yazın; IBAN bilgisini, ödeme planını ve dekont teslimini birlikte netleştirelim.</p>' +
-      '<p style="margin-top:14px">Ücretler peşin ya da 10 taksit hâlinde ödenebilir. Erken kayıt ve kardeş indirimi peşin ödemede birleştirilebilir.</p>' +
       '<p style="margin-top:14px" class="kayit-not">Kart ile online ödeme altyapımız kurulum aşamasındadır; tamamlandığında bu sayfadan kartla da ödeme yapabileceksiniz.</p>' +
       '<div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px">' +
       '<a class="dg dg-turkuaz" href="#" data-wa="Merhaba, ödeme yapmak istiyorum. IBAN bilgisini ve ödeme planını paylaşabilir misiniz?">WhatsApp\'tan yazın</a>' +
