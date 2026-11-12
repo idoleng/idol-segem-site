@@ -987,9 +987,9 @@ ul.son-saat b{font-weight:700}
   <div class="bolum bolum-krem" id="yorumlar" data-bolum="yorumlar" hidden>
     <div class="kap">
       <div class="bolum-basi">
-        <span class="kicker">Veli yorumları</span>
-        <h2>Velilerimiz ne diyor?</h2>
-        <p id="yorum-aciklama">Yorumlar velilerimizin izniyle yayımlanır.</p>
+        <span class="kicker">Öğrenci yorumları</span>
+        <h2>Öğrencilerimiz ne diyor?</h2>
+        <p id="yorum-aciklama">Öğrencilerimizin panomuza kendi el yazılarıyla bıraktığı notlardan. İsimler gizlilik için baş harfleriyle verilmiştir.</p>
       </div>
       <div class="yorum-grid" id="yorum-grid"></div>
     </div>
@@ -2859,6 +2859,12 @@ function odemeTablosu(k){
    {metin:'Velinin kendi cümleleri.', kim:'A. Y.', bilgi:'6. sınıf velisi · Ortaokul desteği', izin:true}
 ------------------------------------------------------------------- */
 const YORUMLAR = [
+  {izin:true, kim:'Ç. G. Ş.', bilgi:'Öğrencimiz', metin:"İdol'e geldiğim için çok mutluyum. En son yapılan etkinlikteki aktivitelerde çok mutlu oldum, çok keyif aldım. Öğretmenlerimiz de çok iyi, çok iyi ders anlatıyorlar."},
+  {izin:true, kim:'E. Ö.', bilgi:'Öğrencimiz', metin:"İdol Eğitim Kurumu gerçekten çok yardımcı oluyor. Yaptığı etkinliklerle eğlenceli olup bizi az da olsa sınav stresinden uzaklaştırıyor."},
+  {izin:true, kim:'A. A.', bilgi:'Öğrencimiz', metin:"Geldiğime asla pişman olmadığım, olmayacağım bir kurum. Her şey için teşekkürler!"},
+  {izin:true, kim:'E. Ö.', bilgi:'Öğrencimiz', metin:"Eğlenceli bir etkinlikti, çok eğlendik; bu tür etkinliklerin devamını dilerim. İdol'de her şeyi öğreniyorum, mutluyum."},
+  {izin:true, kim:'Öğrencimiz', bilgi:'', metin:"Güzel bir seneydi, ben çok mutluyum buraya geldiğim için. Geç geldim ama iyi ki geldim. Bana çok yararı dokundu."},
+  {izin:true, kim:'Ç. R.', bilgi:'Öğrencimiz', metin:"Oldukça eğlenceli bir etkinlikti. Keşke her dershane, dil kursu böyle etkinlik yapsa..."}
 ];
 
 /* ---- Ana sayfa SSS ------------------------------------------------- */
@@ -2967,7 +2973,7 @@ function anaBolumleriKur(){
     grid.innerHTML = yayin.slice(0,6).map(y=>`
       <figure class="yorum">
         <blockquote>${kacar(y.metin)}</blockquote>
-        <figcaption><b>${kacar(y.kim||'Velimiz')}</b>${kacar(y.bilgi||'')}</figcaption>
+        <figcaption><b>${kacar(y.kim||'Öğrencimiz')}</b>${kacar(y.bilgi||'')}</figcaption>
       </figure>`).join('');
     bolum.hidden = false;
   } else if(KURUM.taslakModu){

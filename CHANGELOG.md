@@ -262,3 +262,13 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
   T.C. kimlik/belge numarası satırları bulanıklaştırıldı.
 - Yeni fotoğraf eklemek için dosyayı `foto/` klasörüne koyup `index.html` içindeki
   `GALERI` listesine bir satır eklemek yeterli.
+
+## v11 — 2026-11-12
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `d6fa944`
+
+### Değişenler
+- Hakkımızda sayfasındaki "2010'dan bugüne" zaman çizelgesi kaldırıldı.
+- Ana sayfadaki yorum bölümü "Öğrencilerimiz ne diyor?" başlığıyla yayına alındı.
+  Altı yorum, öğrencilerin panoya bıraktığı el yazısı notlardan alındı; isimler
+  baş harfleriyle verildi, yazım hataları düzeltildi, bazı notlar kısaltıldı.
