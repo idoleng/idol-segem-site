@@ -275,3 +275,5 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
 - Yorum bölümüne "Panomuzdan el yazısı notlar" eklendi: dokuz öğrenci notunun
   kırpılmış fotoğrafı (`foto/not-*.jpg`). Öğrenci adları ve başka kuruma ait
   antet bulanıklaştırıldı ya da kırpıldı; nota tıklayınca büyür.
+- Kurs kartlarının fotoğraflı kapaklarında sol altta İDOL logosu gösteriliyor;
+  AHOB kartında ayrıca sağ altta ZekaSoft logosu var (`logo-zekasoft.png`).
