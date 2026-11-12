@@ -213,7 +213,7 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
   doğrulama betikleri temizlendi, e-posta adresleri düz hâline döndürüldü.
 - Kurslar, Hakkımızda, İletişim, yasal metinler ve ödeme sayfaları değişmedi.
 
-### Eksik içerik (kurumdan bekleniyor)
-- İlk ekran fotoğrafı: `KURUM.heroFoto` boş, yerinde çizim görünüyor.
-- Veli yorumları: `YORUMLAR` listesi boş olduğu için bölüm yayında gizli.
+- İlk ekrana gerçek kurum fotoğrafı eklendi (`foto/ana-sayfa.jpg`); fotoğraftaki
+  tüm yüzler bulanıklaştırıldı.
+- Veli yorumu şimdilik yok: `YORUMLAR` listesi boş, bölüm yayında gizli.
 - `taslakModu` kapalı (`false`); taslak notları ziyaretçiye görünmez.
