@@ -257,7 +257,7 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
 - "Merkezimizden kareler" fotoğraf galerisi eklendi: ana sayfada (SSS'den önce) ve
   Hakkımızda sayfasının sonunda. Fotoğrafa tıklayınca büyür; ok tuşları ve
   düğmelerle gezilir, Esc ile kapanır.
-- Galeride kurumun kendi 6 fotoğrafı var (`foto/galeri-*.jpg` ve `foto/ana-sayfa.jpg`).
+- Galeride kurumun kendi 10 fotoğrafı var (`foto/galeri-*.jpg` ve `foto/ana-sayfa.jpg`).
   Öğrenci ve veli yüzleri, başarı sertifikasındaki öğrenci adı ve belgelerdeki
   T.C. kimlik/belge numarası satırları bulanıklaştırıldı.
 - Yeni fotoğraf eklemek için dosyayı `foto/` klasörüne koyup `index.html` içindeki
