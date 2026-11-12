@@ -198,3 +198,22 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
   yeniden yazmak gerekmesin diye duruyor.
 - Hukuki sayfalardaki (mesafeli satış, ön bilgilendirme, iptal-iade) genel
   ödeme/iade maddeleri — tutar içermiyor, mevzuat metni.
+## v8 — 2026-11-12
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `8ba9405`
+
+### Değişenler
+- Ana sayfa yeni tasarıma geçirildi (`idol-anasayfa-tek-dosya.html` temel alındı):
+  yeni ilk ekran, üç ana program kartı, "Nasıl işliyor?" adımları, "Neden İDOL?",
+  ana sayfa SSS, son çağrı bölümü, mobil alt çubuk ve ücretsiz tanışma dersi formu.
+- Üst menü sadeleşti: Programlar · Nasıl işliyor? · Hakkımızda · İletişim.
+- Çerez onay bandı eklendi; Meta Pixel yalnızca ziyaretçi kabul ederse yüklenir.
+- Kaynak dosyadaki gömülü (base64) logo ve favicon, depodaki `logo-idol.png` ve
+  `favicon.png` dosyalarına bağlandı; Cloudflare'in eklediği e-posta gizleme ve
+  doğrulama betikleri temizlendi, e-posta adresleri düz hâline döndürüldü.
+- Kurslar, Hakkımızda, İletişim, yasal metinler ve ödeme sayfaları değişmedi.
+
+### Eksik içerik (kurumdan bekleniyor)
+- İlk ekran fotoğrafı: `KURUM.heroFoto` boş, yerinde çizim görünüyor.
+- Veli yorumları: `YORUMLAR` listesi boş olduğu için bölüm yayında gizli.
+- `taslakModu` kapalı (`false`); taslak notları ziyaretçiye görünmez.

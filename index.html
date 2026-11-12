@@ -184,46 +184,6 @@ input,select,textarea{font:inherit}
 .bolum-basi p{margin-top:14px; color:var(--gri); font-size:17px}
 .bolum-basi-satir{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap}
 
-/* --- Hero ------------------------------------------------------- */
-.hero{position:relative; background:var(--degrade); color:#fff; overflow:hidden}
-.hero::after{content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
-  background:linear-gradient(100deg, rgba(4,38,60,.62) 0%, rgba(4,38,60,.50) 34%, rgba(4,38,60,.16) 62%, rgba(4,38,60,0) 84%)}
-@media(max-width:820px){
-  .hero::after{background:linear-gradient(180deg, rgba(4,38,60,.55) 0%, rgba(4,38,60,.45) 60%, rgba(4,38,60,.18) 100%)}
-}
-.hero-doku{position:absolute; inset:0; opacity:.9}
-.hero-balon{position:absolute; border-radius:50%; filter:blur(2px)}
-.hero-b1{width:420px; height:420px; right:-120px; top:-140px; background:radial-gradient(circle,rgba(79,201,236,.55),transparent 65%)}
-.hero-b2{width:340px; height:340px; left:-110px; bottom:-130px; background:radial-gradient(circle,rgba(255,201,60,.30),transparent 65%)}
-.hero .kap{position:relative; z-index:2; padding-block:88px 96px}
-.hero-ic{max-width:780px}
-.hero-etiket{
-  display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.42); border-radius:999px; padding:7px 16px 7px 10px;
-  font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin-bottom:26px;
-}
-.hero-etiket i{width:7px; height:7px; border-radius:50%; background:var(--sari); box-shadow:0 0 0 4px rgba(255,201,60,.28)}
-.hero h1{font-size:clamp(38px,6.4vw,68px); font-weight:900; letter-spacing:-.035em; text-shadow:0 2px 18px rgba(4,38,60,.28)}
-.hero h1 .h1-ust{display:block; font-size:clamp(21px,2.6vw,30px); font-weight:800; letter-spacing:-.02em; color:#fff; margin-bottom:12px; text-shadow:0 1px 12px rgba(4,38,60,.35)}
-.hero h1 em{
-  font-style:normal;
-  background-image:linear-gradient(var(--sari),var(--sari));
-  background-size:100% .20em; background-position:0 88%; background-repeat:no-repeat;
-  -webkit-box-decoration-break:clone; box-decoration-break:clone;
-  padding-inline:2px;
-}
-.hero-alt{margin-top:24px; font-size:18.5px; line-height:1.6; color:#fff; max-width:610px; text-shadow:0 1px 10px rgba(4,38,60,.30)}
-.hero-dgler{display:flex; gap:13px; margin-top:36px; flex-wrap:wrap}
-.hero-not{margin-top:22px; font-size:14px; color:rgba(255,255,255,.78); display:flex; align-items:center; gap:9px}
-
-/* --- İstatistik ------------------------------------------------- */
-.ist{background:var(--krem); border-bottom:1px solid var(--cizgi)}
-.ist-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--cizgi); border:1px solid var(--cizgi); border-radius:var(--r-l); overflow:hidden}
-.ist-kutu{background:var(--krem); padding:34px 26px; text-align:center}
-.ist-sayi{font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(34px,4.4vw,50px); letter-spacing:-.045em; color:var(--mavi-derin); line-height:1}
-.ist-sayi span{color:var(--turkuaz)}
-.ist-etiket{margin-top:10px; font-size:13.5px; font-weight:600; color:var(--gri); letter-spacing:.01em}
-
 /* --- Kurs kartı ------------------------------------------------- */
 .kurs-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px}
 .kart{
@@ -266,28 +226,6 @@ input,select,textarea{font:inherit}
 .fiyat small{font-size:12px; color:var(--gri-acik); font-weight:600}
 .kart-ok{width:38px; height:38px; border-radius:50%; background:var(--krem); display:flex; align-items:center; justify-content:center; color:var(--mavi-derin); flex-shrink:0; transition:background .18s,color .18s}
 .kart:hover .kart-ok{background:var(--turkuaz); color:#fff}
-
-/* --- Kategori --------------------------------------------------- */
-.kat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-.kat-kutu{
-  display:flex; align-items:center; gap:16px; padding:22px; background:#fff;
-  border:1px solid var(--cizgi); border-radius:var(--r-m); text-decoration:none;
-  transition:border-color .18s, transform .18s, background .18s;
-}
-.kat-kutu:hover{border-color:var(--turkuaz); transform:translateY(-3px)}
-.kat-ikon{width:52px; height:52px; border-radius:15px; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#fff}
-.kat-ikon svg{width:26px; height:26px}
-.kat-kutu h3{font-size:16.5px; font-weight:800}
-.kat-kutu p{font-size:13.5px; color:var(--gri-acik); margin-top:3px; font-weight:600}
-
-/* --- Çağrı bölümü ----------------------------------------------- */
-.cagri{position:relative; background:var(--murekkep); color:#fff; border-radius:var(--r-l); overflow:hidden; padding:56px}
-.cagri-doku{position:absolute; inset:0; opacity:.55}
-.cagri-ic{position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap}
-.cagri h2{font-size:clamp(28px,3.6vw,40px); font-weight:900; max-width:560px}
-.cagri p{margin-top:14px; color:rgba(255,255,255,.72); max-width:520px; font-size:16.5px}
-.cagri-rozet{display:inline-flex; align-items:center; gap:9px; background:var(--sari); color:var(--murekkep); font-family:'Montserrat',sans-serif; font-weight:900; font-size:13px; letter-spacing:.06em; padding:8px 16px; border-radius:999px; margin-bottom:20px}
-.cagri-dgler{display:flex; flex-direction:column; gap:11px; min-width:236px}
 
 /* --- Kurs listesi / filtreler ----------------------------------- */
 .sayfa-basi{background:var(--krem); border-bottom:1px solid var(--cizgi); padding:56px 0 48px}
@@ -405,21 +343,6 @@ ul.temiz{list-style:none; padding:0; margin:0}
 .blok li a[href^="tel:"], .blok li a[href^="mailto:"]{color:var(--turkuaz-koyu); font-weight:700; text-decoration:none; white-space:nowrap}
 .blok p a[href^="tel:"]:hover, .blok p a[href^="mailto:"]:hover,
 .blok li a[href^="tel:"]:hover, .blok li a[href^="mailto:"]:hover{text-decoration:underline}
-.online-bant{background:var(--degrade); color:#fff; position:relative; overflow:hidden}
-.online-ic{display:flex; gap:44px; align-items:center; flex-wrap:wrap}
-.online-metin{flex:1 1 460px}
-.online-metin .kicker{color:var(--sari)}
-.online-metin h2{color:#fff; margin-top:10px}
-.online-metin p{color:rgba(255,255,255,.92); margin-top:16px; font-size:17px; line-height:1.65; max-width:620px}
-.online-madde{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
-.online-madde span{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:8px 16px; font-size:14px; font-weight:700}
-.online-kutu{flex:0 1 320px; background:#fff; border-radius:var(--r-m); padding:28px; color:var(--murekkep)}
-.online-ikon{width:52px; height:52px; border-radius:15px; background:var(--degrade); color:#fff; display:flex; align-items:center; justify-content:center; margin-bottom:16px}
-.online-ikon svg{width:26px; height:26px}
-.online-kutu b{font-family:'Montserrat',sans-serif; font-size:19px; font-weight:800; display:block}
-.online-kutu p{color:var(--gri); font-size:15px; line-height:1.6; margin:8px 0 20px}
-.online-kutu .dg{width:100%}
-@media(max-width:820px){ .online-ic{gap:30px} }
 .kayit-not{font-size:12.5px; color:var(--gri-acik); text-align:center; line-height:1.5; margin-top:6px}
 
 /* --- Hakkımızda ------------------------------------------------- */
@@ -504,7 +427,7 @@ ul.temiz{list-style:none; padding:0; margin:0}
 
 /* --- Duyarlı ---------------------------------------------------- */
 @media (max-width:1000px){
-  .kurs-grid,.kat-grid{grid-template-columns:repeat(2,1fr)}
+  .kurs-grid{grid-template-columns:repeat(2,1fr)}
   .detay-govde{grid-template-columns:1fr; gap:30px}
   .yan{position:static}
   .iletisim-grid{grid-template-columns:1fr}
@@ -524,18 +447,274 @@ ul.temiz{list-style:none; padding:0; margin:0}
   .menu-dugme{display:flex}
   .ustbar .marka-alt{display:none}
   .ustbar .marka .logo{height:40px}
-  .ist-grid{grid-template-columns:1fr 1fr}
-  .kurs-grid,.kat-grid,.iki-kolon,.kazanim,.alan-ikili{grid-template-columns:1fr}
+  .kurs-grid,.iki-kolon,.kazanim,.alan-ikili{grid-template-columns:1fr}
   .ekip-grid{grid-template-columns:1fr 1fr}
-  .cagri{padding:36px 26px}
   .blok{padding:26px 22px}
   .alt-grid{grid-template-columns:1fr}
-  .hero .kap{padding-block:62px 70px}
   .duyuru .kap{justify-content:center; text-align:center}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important}
-  .kart:hover,.dg:hover,.kat-kutu:hover,.ekip-kart:hover,.yuzen-wa:hover{transform:none}
+  .kart:hover,.dg:hover,.ekip-kart:hover,.yuzen-wa:hover{transform:none}
+}
+
+/* ============================================================
+   ANA SAYFA YENİLEME — ilk ekran, program kartları, adımlar,
+   neden İDOL, yorumlar, SSS, son çağrı, mobil çubuk, tanışma formu
+   ============================================================ */
+:root{ --kum:#F3F1EB; --derin-koyu:#083A59 }
+[hidden]{display:none !important}
+#programlar,#nasil,#neden,#yorumlar,#sss,#son-cagri{scroll-margin-top:74px}
+body:not(.taslak) [data-taslak]{display:none !important}
+
+/* Sarı yalnızca ana eylem düğmelerinde kullanılır; diğer vurgular maviye çekildi */
+.duyuru b{color:#fff}
+.kicker{color:var(--mavi-derin)}
+.kicker::before{background:var(--turkuaz)}
+.alt-baslik{color:var(--turkuaz-acik)}
+.rozet.sari,.kart-indirim{background:#fff; color:var(--mavi-derin); border-color:#fff}
+.ot-vurgu{background:rgba(10,163,221,.10)}
+.ot-vurgu i{color:var(--mavi-derin); background:rgba(10,163,221,.20)}
+.kayit-rozet{background:rgba(10,163,221,.14); color:var(--mavi-derin)}
+.form-uyari{background:#FDF1EF; color:#9A2A1B; border:1px solid #F3CFC9}
+
+/* Düğme ekleri */
+.dg-buyuk{padding:16px 28px; font-size:15.5px}
+.dg-sari{box-shadow:0 10px 22px -12px rgba(190,140,0,.75)}
+.dg-derin{background:var(--mavi-derin); color:#fff}
+.dg-derin:hover{background:var(--derin-koyu)}
+.gezinti a.dg-derin{color:#fff; padding:11px 18px; margin-left:8px}
+.gezinti a.dg-derin:hover{background:var(--derin-koyu); color:#fff}
+.dg-cizgi{border-color:#CFCBC2}
+.dg-cizgi .wa-ikon{color:#1FAF57}
+.dg-sari .wa-ikon{color:inherit}
+.filtre-grup a.cip{text-decoration:none}
+
+/* --- İlk ekran -------------------------------------------------- */
+.giris{position:relative; background:linear-gradient(180deg,#E9F6FB 0%,var(--zemin) 100%); overflow:hidden; border-bottom:1px solid var(--cizgi)}
+.giris-doku{position:absolute; inset:0; opacity:.75; -webkit-mask-image:linear-gradient(180deg,#000,transparent 88%); mask-image:linear-gradient(180deg,#000,transparent 88%)}
+.giris-ic{position:relative; display:grid; grid-template-columns:minmax(0,1.32fr) minmax(0,.88fr); gap:52px; align-items:center; padding-block:50px 58px}
+.giris-etiket{
+  display:inline-block; font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--mavi-derin); background:#fff; border:1px solid rgba(10,163,221,.38);
+  border-radius:999px; padding:7px 15px; margin-bottom:20px;
+}
+.giris h1{font-size:clamp(31px,3.55vw,46px); font-weight:900; letter-spacing:-.035em; line-height:1.08}
+.giris h1 span{color:var(--turkuaz-koyu)}
+.giris-alt{margin-top:18px; font-size:18px; line-height:1.6; color:var(--gri); max-width:600px}
+.giris-dgler{display:flex; gap:12px; flex-wrap:wrap; margin-top:28px}
+ul.guven{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:26px; font-size:14.5px; font-weight:700; color:var(--mavi-derin)}
+ul.guven li{display:flex; align-items:center; gap:8px}
+ul.guven svg{width:19px; height:19px; padding:3.5px; border-radius:50%; background:rgba(10,163,221,.17); color:var(--mavi-derin); flex-shrink:0}
+
+.giris-foto{position:relative; margin:0; aspect-ratio:5/4.5; border-radius:var(--r-l); box-shadow:var(--golge-yukselt); background:var(--degrade)}
+.giris-foto img,.giris-cizim{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:inherit}
+.giris-rozet{
+  position:absolute; left:-20px; bottom:24px; display:flex; gap:12px; align-items:center; background:#fff;
+  border:1px solid var(--cizgi); border-radius:var(--r-m); padding:11px 18px 11px 11px; box-shadow:var(--golge);
+  font-size:12.5px; color:var(--gri); line-height:1.4;
+}
+.giris-rozet-sayi{width:44px; height:44px; border-radius:13px; background:var(--mavi-derin); color:#fff; font-family:'Montserrat',sans-serif; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; flex-shrink:0}
+.giris-rozet b{display:block; font-family:'Montserrat',sans-serif; font-weight:800; font-size:15px; color:var(--murekkep)}
+.taslak-not{
+  position:absolute; top:14px; right:14px; max-width:270px; display:flex; gap:10px; align-items:flex-start;
+  background:rgba(255,255,255,.96); border:1.5px dashed var(--mavi-derin); border-radius:var(--r-s);
+  padding:10px 12px; font-size:12.5px; line-height:1.45; color:var(--mavi-derin);
+}
+.taslak-not svg{flex-shrink:0; margin-top:1px}
+
+/* --- Bölümler --------------------------------------------------- */
+.bolum-krem{background:var(--krem); border-block:1px solid var(--cizgi)}
+
+/* 1. Programlar */
+.prog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
+.prog{
+  display:flex; flex-direction:column; background:#fff; border:1px solid var(--cizgi); border-radius:var(--r-l);
+  padding:28px; text-decoration:none; box-shadow:var(--golge); transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.prog:hover{transform:translateY(-4px); border-color:rgba(10,163,221,.5); box-shadow:var(--golge-yukselt)}
+.prog-ust{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:22px}
+.prog-ikon{width:56px; height:56px; border-radius:16px; background:linear-gradient(315deg,#0B4C74,#0A8CC4); color:#fff; display:flex; align-items:center; justify-content:center}
+.prog-ikon svg{width:28px; height:28px}
+.prog-sinif{font-family:'Montserrat',sans-serif; font-weight:800; font-size:13.5px; color:var(--mavi-derin); background:rgba(10,163,221,.13); border-radius:999px; padding:7px 15px; white-space:nowrap}
+.prog h3{font-size:22px; font-weight:800; line-height:1.2}
+.prog p{margin-top:10px; color:var(--gri); font-size:15.5px; line-height:1.55}
+ul.prog-liste{margin-top:18px; padding-top:16px; border-top:1px dashed var(--cizgi); display:grid; gap:7px; font-size:14px; font-weight:600; color:var(--gri)}
+ul.prog-liste li{display:flex; gap:10px; align-items:center}
+ul.prog-liste li::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--turkuaz); flex-shrink:0}
+.prog-bag{margin-top:auto; padding-top:22px; display:inline-flex; gap:8px; align-items:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:15px; color:var(--mavi-derin)}
+.prog-bag svg{transition:transform .18s}
+.prog:hover .prog-bag svg{transform:translateX(4px)}
+.prog-diger{margin-top:30px; text-align:center; color:var(--gri); font-size:16px}
+.prog-diger a{display:inline-flex; align-items:center; gap:6px; margin-left:6px; font-family:'Montserrat',sans-serif; font-weight:800; font-size:15px; color:var(--mavi-derin); text-underline-offset:4px}
+
+/* 2. Adımlar */
+ol.adimlar{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:28px}
+.adim{position:relative; background:#fff; border:1px solid var(--cizgi); border-radius:var(--r-l); padding:28px}
+.adim-no{width:44px; height:44px; border-radius:50%; background:var(--mavi-derin); color:#fff; font-family:'Montserrat',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; margin-bottom:18px}
+.adim h3{font-size:19px; font-weight:800; line-height:1.25}
+.adim p{margin-top:10px; color:var(--gri); font-size:15.5px; line-height:1.55}
+.adim:not(:last-child)::after{
+  content:''; position:absolute; right:-21px; top:43px; width:12px; height:12px; z-index:1;
+  border-top:2.5px solid var(--turkuaz); border-right:2.5px solid var(--turkuaz); transform:rotate(45deg);
+}
+.plan-kutu{
+  margin-top:28px; display:flex; gap:20px 32px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+  background:#fff; border:1px solid var(--cizgi); border-left:5px solid var(--turkuaz); border-radius:var(--r-m); padding:24px 28px;
+}
+.plan-kutu div{flex:1 1 420px}
+.plan-kutu h3{font-size:18px; font-weight:800}
+.plan-kutu p{margin-top:8px; color:var(--gri); font-size:15.5px; line-height:1.55; max-width:70ch}
+
+/* 3. Neden İDOL */
+.neden-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:40px}
+.neden-ikon{width:56px; height:56px; border-radius:16px; background:rgba(10,163,221,.13); color:var(--mavi-derin); display:flex; align-items:center; justify-content:center; margin-bottom:18px}
+.neden-ikon svg{width:28px; height:28px}
+.neden h3{font-size:20px; font-weight:800; line-height:1.25}
+.neden p{margin-top:10px; color:var(--gri); font-size:15.5px; line-height:1.6}
+
+/* 4. Yorumlar */
+.yorum-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
+.yorum{margin:0; background:#fff; border:1px solid var(--cizgi); border-radius:var(--r-l); padding:28px; display:flex; flex-direction:column}
+.yorum blockquote{margin:0; font-size:16.5px; line-height:1.6}
+.yorum blockquote::before{content:'“'; display:block; height:26px; font-family:'Montserrat',sans-serif; font-weight:900; font-size:52px; line-height:1; color:var(--turkuaz)}
+.yorum figcaption{margin-top:auto; padding-top:20px; font-size:14px; color:var(--gri)}
+.yorum figcaption b{display:block; font-family:'Montserrat',sans-serif; font-weight:800; font-size:15px; color:var(--murekkep)}
+.yorum-taslak{background:transparent; border:1.5px dashed var(--mavi-derin)}
+.yorum-taslak h3{font-size:18px; font-weight:800; color:var(--mavi-derin)}
+.yorum-taslak p{margin-top:10px; font-size:14.5px; line-height:1.55; color:var(--gri)}
+.taslak-etiket{align-self:flex-start; font-family:'Montserrat',sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; background:var(--mavi-derin); color:#fff; border-radius:999px; padding:5px 11px; margin-bottom:14px}
+.yorum-taslak-not{grid-column:1/-1; font-size:14px; color:var(--gri)}
+
+/* 5. SSS */
+.sss-kap{display:grid; grid-template-columns:minmax(0,330px) minmax(0,1fr); gap:60px; align-items:start}
+.sss-kap .bolum-basi{margin-bottom:0; position:sticky; top:104px}
+.sss-blok{margin-bottom:0; padding:8px 30px}
+.sss-kap .bolum-basi h2{font-size:clamp(27px,3vw,34px)}
+.sss-eylem{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+
+/* 6. Son çağrı */
+.son-bolum{padding-top:0}
+.son{position:relative; background:linear-gradient(120deg,#0B4C74 0%,#0A6A9C 62%,#0A8CC4 100%); color:#fff; border-radius:var(--r-l); overflow:hidden; padding:58px 56px}
+.son-doku{position:absolute; inset:0; opacity:.7}
+.son-ic{position:relative; display:flex; align-items:center; justify-content:space-between; gap:32px 40px; flex-wrap:wrap}
+.son h2{flex:1 1 420px; font-size:clamp(27px,3.4vw,38px); font-weight:900; max-width:640px; line-height:1.12}
+.son-dgler{display:flex; flex-direction:column; gap:12px; min-width:300px}
+.son-bilgi{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px}
+.son-kutu{display:flex; gap:16px; background:#fff; border:1px solid var(--cizgi); border-radius:var(--r-m); padding:22px 24px; text-decoration:none; color:inherit; transition:border-color .18s}
+a.son-kutu:hover{border-color:var(--turkuaz)}
+.son-ikon{width:44px; height:44px; border-radius:13px; background:var(--krem); color:var(--mavi-derin); display:flex; align-items:center; justify-content:center; flex-shrink:0}
+.son-baslik{display:block; font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.11em; text-transform:uppercase; color:var(--gri-acik)}
+a.son-kutu b{display:block; margin-top:6px; font-family:'Montserrat',sans-serif; font-weight:800; font-size:17px; letter-spacing:-.01em}
+.son-alt{display:block; margin-top:4px; font-size:14px; color:var(--gri)}
+ul.son-saat{margin-top:8px; display:grid; gap:5px; font-size:14.5px}
+ul.son-saat li{display:flex; justify-content:space-between; gap:16px}
+ul.son-saat span{color:var(--gri)}
+ul.son-saat b{font-weight:700}
+
+/* Alt bilgide logo koyu zeminde okunabilsin */
+.altbilgi .marka .logo{background:#fff; border-radius:12px; padding:6px 9px; height:60px}
+
+/* --- Mobil sabit çubuk ------------------------------------------ */
+.mobil-cubuk{display:none}
+
+/* --- Tanışma dersi formu ---------------------------------------- */
+.td{
+  border:none; padding:0; border-radius:var(--r-l); width:min(600px,calc(100vw - 24px)); max-height:calc(100dvh - 24px);
+  background:#fff; color:var(--murekkep); box-shadow:0 30px 80px -20px rgba(4,38,60,.55); overflow:auto;
+}
+.td::backdrop{background:rgba(8,40,62,.58)}
+.td-ic{position:relative; padding:34px 34px 28px}
+.td-kapat{position:absolute; top:14px; right:14px; width:40px; height:40px; border-radius:50%; border:1px solid var(--cizgi); background:#fff; color:var(--murekkep); display:flex; align-items:center; justify-content:center}
+.td-kapat:hover{border-color:var(--murekkep)}
+.td h2{font-size:25px; font-weight:900; padding-right:44px; line-height:1.15}
+.td-alt{margin:9px 0 22px; color:var(--gri); font-size:15.5px}
+.td .alan{margin-bottom:16px}
+.td .alan label i{font-style:normal; text-transform:none; letter-spacing:0; font-weight:600; color:var(--gri-acik)}
+.td-secim{border:0; padding:0; margin:0 0 16px; min-width:0}
+.td-secim legend{padding:0; margin-bottom:8px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:.10em; text-transform:uppercase; color:var(--gri)}
+.td-secim-ic{display:flex; flex-wrap:wrap; gap:10px}
+.td-secim label{flex:1 1 180px; position:relative; cursor:pointer}
+.td-secim input{position:absolute; inset:0; opacity:0; margin:0; cursor:pointer}
+.td-secim span{display:block; text-align:center; padding:12px 14px; border:1.5px solid var(--cizgi); border-radius:var(--r-s); font-weight:700; font-size:14.5px; background:var(--zemin); transition:border-color .16s, background .16s}
+.td-secim input:checked + span{border-color:var(--turkuaz); background:rgba(10,163,221,.10); color:var(--mavi-derin)}
+.td-secim input:focus-visible + span{outline:3px solid var(--turkuaz); outline-offset:2px}
+.td .onay a{color:var(--mavi-derin)}
+.td-tamam{text-align:center; padding:16px 0 4px}
+.td-tamam-ikon{width:60px; height:60px; border-radius:50%; background:rgba(10,163,221,.15); color:var(--mavi-derin); display:flex; align-items:center; justify-content:center; margin:0 auto 18px}
+.td-tamam h2{padding-right:0}
+.td-tamam p{margin:12px auto 22px; color:var(--gri); max-width:44ch}
+
+/* --- Duyarlı ---------------------------------------------------- */
+@media (max-width:1080px){
+  .giris-ic{gap:40px}
+  .neden-grid{gap:28px}
+  .sss-kap{gap:40px}
+}
+@media (max-width:900px){
+  .giris-ic{grid-template-columns:1fr; gap:34px; padding-block:40px 48px}
+  .giris-foto{aspect-ratio:16/10; max-width:640px}
+  .giris-rozet{left:14px; bottom:14px}
+  .prog-grid,ol.adimlar,.neden-grid,.yorum-grid{grid-template-columns:1fr}
+  ol.adimlar{gap:26px}
+  .adim:not(:last-child)::after{right:auto; left:44px; top:auto; bottom:-20px; transform:rotate(135deg)}
+  .sss-kap{grid-template-columns:1fr; gap:28px}
+  .sss-kap .bolum-basi{position:static}
+}
+@media (max-width:760px){
+  .duyuru{display:none}
+  .ustbar .kap{height:62px}
+  .gezinti{top:62px}
+  .gezinti a.dg-derin{margin-left:0}
+  #programlar,#nasil,#neden,#yorumlar,#sss,#son-cagri{scroll-margin-top:62px}
+
+  /* İlk ekran: ana mesaj ve iki düğme kaydırmadan görünsün */
+  .giris-ic{padding-block:22px 40px; gap:28px}
+  .giris-etiket{font-size:10.5px; padding:5px 11px; margin-bottom:12px}
+  .giris h1{font-size:clamp(26px,7.7vw,34px); line-height:1.1}
+  .giris-alt{margin-top:12px; font-size:15.5px; line-height:1.5}
+  .giris-dgler{flex-direction:column; gap:10px; margin-top:18px}
+  .giris-dgler .dg{width:100%; padding:14px 20px}
+  ul.guven{margin-top:18px; gap:7px 16px; font-size:13.5px}
+  .taslak-not{left:12px; right:12px; top:12px; max-width:none}
+
+  .bolum-basi{margin-bottom:28px}
+  .prog,.adim,.yorum{padding:24px 22px}
+  .sss-blok{padding:6px 20px}
+  .son{padding:36px 24px}
+  .son-dgler{min-width:0; width:100%}
+  .son-dgler .dg{padding-inline:14px; text-align:center}
+  .son-bilgi{grid-template-columns:1fr}
+  .plan-kutu{padding:22px}
+  .plan-kutu .dg{width:100%}
+  .prog-diger a{margin:8px 0 0; display:flex; justify-content:center}
+
+  .mobil-cubuk{
+    display:flex; gap:10px; position:fixed; left:0; right:0; bottom:0; z-index:75;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.97); border-top:1px solid var(--cizgi); box-shadow:0 -10px 26px -18px rgba(11,76,116,.5);
+  }
+  .mobil-cubuk .dg{flex:1; padding:14px 18px; font-size:15.5px}
+  .mobil-wa{width:54px; border-radius:16px; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; text-decoration:none}
+  .yuzen-wa{display:none}
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  .cerez-bant{bottom:calc(84px + env(safe-area-inset-bottom)); left:10px; right:10px; padding:14px 16px; gap:12px}
+  .cerez-bant p{font-size:13px; line-height:1.5; flex-basis:100%}
+
+  .td-ic{padding:26px 20px 22px}
+  .td h2{font-size:21px}
+}
+/* Küçük telefonlar: başlık üç satırda kalsın, iki düğme sabit çubuğun üstünde görünsün */
+@media (max-width:380px), (max-width:760px) and (max-height:620px){
+  .giris-ic{padding-top:16px}
+  .giris-etiket{margin-bottom:10px}
+  .giris h1{font-size:24.5px}
+  .giris-alt{font-size:15px; margin-top:10px; line-height:1.45}
+  .giris-dgler{margin-top:15px; gap:8px}
+  .giris-dgler .dg{padding:12.5px 18px; font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  .prog:hover{transform:none}
 }
 </style>
 </head>
@@ -556,13 +735,15 @@ ul.temiz{list-style:none; padding:0; margin:0}
       <img class="logo" src="logo-idol.png" alt="idol segem english" width="160" height="120">
       <span class="marka-alt">Sosyal Etkinlik ve<br>Gelişim Merkezi</span>
     </a>
-    <nav class="gezinti" id="gezinti">
-      <a href="#/" data-yol="/">Ana Sayfa</a>
-      <a href="#/online-kurslar" data-yol="/online-kurslar">Online Kurslarımız</a>
-      <a href="#/yuz-yuze" data-yol="/yuz-yuze">Yüz Yüze (Gelibolu)</a>
+    <nav class="gezinti" id="gezinti" aria-label="Ana menü">
+      <a href="#/kurslar" data-yol="/kurslar">Programlar</a>
+      <a href="#/nasil-isliyor" data-yol="/nasil-isliyor">Nasıl işliyor?</a>
       <a href="#/hakkimizda" data-yol="/hakkimizda">Hakkımızda</a>
       <a href="#/iletisim" data-yol="/iletisim">İletişim</a>
-      <a class="dg dg-turkuaz dg-kck" href="#" id="wa-ustbar">WhatsApp'tan yaz</a>
+      <a class="dg dg-derin dg-kck" href="#" id="wa-ustbar" data-wa="Merhaba, İDOL SEGEM programları hakkında bilgi almak istiyorum." data-konum="ust-menu">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ik-wa"/></svg>
+        WhatsApp'tan bilgi al
+      </a>
     </nav>
     <button class="menu-dugme" id="menu-dugme" aria-label="Menüyü aç" aria-expanded="false"><span></span></button>
   </div>
@@ -573,114 +754,270 @@ ul.temiz{list-style:none; padding:0; margin:0}
 <!-- ================= ANA SAYFA ================= -->
 <section class="sayfa" id="sayfa-anasayfa">
 
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-doku kareli-beyaz"></div>
-    <div class="hero-balon hero-b1"></div>
-    <div class="hero-balon hero-b2"></div>
-    <div class="kap">
-      <div class="hero-ic">
-        <span class="hero-etiket"><i></i> Gelibolu · 2010'dan beri</span>
-        <h1><span class="h1-ust">Fark yaratanların eğitim platformu</span><em>“Geleceğin İDOLlerini yetiştiriyoruz.”</em></h1>
-        <p class="hero-alt">İlkokuldan ortaokula; sınıf destek programları, LGS hazırlık, İngilizce kursu, branş bazında bire bir özel ders, eğitim koçluğu ve AHOB hızlı okuma programları yürütüyoruz. Dersler Gelibolu'daki merkezimizde yüz yüze ya da canlı online yapılır. Her öğrenciyi bir rehber öğretmen takip eder.</p>
-        <div class="hero-dgler">
-          <a class="dg dg-sari" href="#/online-kurslar">Online Kurslarımız
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  <!-- İlk ekran: kime, nerede/nasıl, ilk adım ne? -->
+  <div class="giris" data-bolum="ilk-ekran">
+    <div class="giris-doku kareli" aria-hidden="true"></div>
+    <div class="kap giris-ic">
+      <div class="giris-metin">
+        <p class="giris-etiket">İlkokul · Ortaokul · LGS · İngilizce</p>
+        <h1>Çocuğunuz için doğru destek, <span>tanışma dersiyle</span> başlasın.</h1>
+        <p class="giris-alt">İlkokul ve ortaokul ders desteği, LGS hazırlık ve İngilizce programları. Gelibolu'da yüz yüze; şehir dışından canlı online katılım imkânı.</p>
+        <div class="giris-dgler" id="giris-dgler">
+          <a class="dg dg-sari dg-buyuk" href="#/tanisma-dersi" data-tanisma data-konum="ilk-ekran" id="giris-dg-tanisma">Ücretsiz tanışma dersi planla
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="dg dg-sari" href="#/yuz-yuze">Yüz Yüze (Gelibolu)
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <a class="dg dg-cizgi dg-buyuk" href="#" data-wa="Merhaba, öğrencim için uygun program hakkında danışmak istiyorum." data-konum="ilk-ekran" id="giris-dg-wa">
+            <svg class="wa-ikon" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ik-wa"/></svg>
+            <span>WhatsApp'tan danış</span>
           </a>
-          <a class="dg dg-hayalet" href="#" data-wa="Merhaba, İDOL SEGEM programları hakkında bilgi almak istiyorum.">WhatsApp'tan bilgi al</a>
         </div>
-        <p class="hero-not">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          Ücretsiz seviye tespit sınavı ve tanışma dersi her yeni öğrenciye açıktır.
+        <ul class="guven temiz">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>2010'dan beri Gelibolu'da</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>En fazla 5 kişilik gruplar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Veli için düzenli takip</li>
+        </ul>
+      </div>
+
+      <!-- Fotoğraf alanı: KURUM.heroFoto doluysa gerçek fotoğraf, boşsa geçici çizim gösterilir -->
+      <figure class="giris-foto" id="giris-foto">
+        <img id="giris-foto-img" alt="" hidden>
+        <svg class="giris-cizim" id="giris-cizim" viewBox="0 0 560 470" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Küçük grup dersini anlatan geçici çizim">
+          <defs>
+            <linearGradient id="gc-zemin" x1="1" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#0B4C74"/><stop offset=".45" stop-color="#0A8CC4"/><stop offset=".75" stop-color="#0AA3DD"/><stop offset="1" stop-color="#4FC9EC"/>
+            </linearGradient>
+            <pattern id="gc-kare" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#fff" stroke-opacity=".13"/></pattern>
+          </defs>
+          <rect width="560" height="470" fill="url(#gc-zemin)"/>
+          <rect width="560" height="470" fill="url(#gc-kare)"/>
+          <!-- tahta -->
+          <rect x="60" y="54" width="300" height="150" rx="14" fill="#fff" opacity=".95"/>
+          <path d="M92 92h120M92 120h170M92 148h92" stroke="#0AA3DD" stroke-width="9" stroke-linecap="round" opacity=".85"/>
+          <path d="M286 142l16 16 30-36" fill="none" stroke="#0B4C74" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- öğretmen -->
+          <path d="M452 186l-52-56" stroke="#083A59" stroke-opacity=".6" stroke-width="15" stroke-linecap="round"/>
+          <rect x="440" y="164" width="84" height="170" rx="34" fill="#083A59" fill-opacity=".6"/>
+          <circle cx="482" cy="128" r="29" fill="#fff"/>
+          <!-- öğrenciler (5 kişi) -->
+          <g>
+            <rect x="36"  y="300" width="68" height="110" rx="30" fill="#D5F1FB"/><circle cx="70"  cy="272" r="25" fill="#fff"/>
+            <rect x="124" y="288" width="68" height="120" rx="30" fill="#fff" opacity=".94"/><circle cx="158" cy="260" r="25" fill="#EAF8FD"/>
+            <rect x="212" y="282" width="68" height="120" rx="30" fill="#D5F1FB"/><circle cx="246" cy="254" r="25" fill="#fff"/>
+            <rect x="300" y="288" width="68" height="120" rx="30" fill="#fff" opacity=".94"/><circle cx="334" cy="260" r="25" fill="#EAF8FD"/>
+            <rect x="388" y="300" width="68" height="110" rx="30" fill="#D5F1FB"/><circle cx="422" cy="272" r="25" fill="#fff"/>
+          </g>
+          <!-- masa -->
+          <ellipse cx="248" cy="426" rx="250" ry="70" fill="#083A59" opacity=".28"/>
+          <ellipse cx="248" cy="410" rx="246" ry="66" fill="#fff"/>
+          <g fill="#4FC9EC">
+            <rect x="60" y="386" width="52" height="15" rx="5" transform="rotate(-8 86 393)"/>
+            <rect x="220" y="374" width="52" height="15" rx="5"/>
+            <rect x="382" y="386" width="52" height="15" rx="5" transform="rotate(8 408 393)"/>
+          </g>
+          <g fill="#0B4C74" opacity=".8">
+            <rect x="136" y="400" width="46" height="13" rx="5"/>
+            <rect x="310" y="400" width="46" height="13" rx="5"/>
+          </g>
+        </svg>
+        <figcaption class="giris-rozet">
+          <span class="giris-rozet-sayi">5</span>
+          <span><b>En fazla 5 kişi</b>Yüz yüze ve online gruplarda</span>
+        </figcaption>
+        <p class="taslak-not" data-taslak>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span><b>Fotoğraf alanı.</b> Buraya kurumun kendi sınıfından, öğretmen ve öğrencileri gösteren gerçek bir kare gelecek.</span>
         </p>
-      </div>
+      </figure>
     </div>
   </div>
 
-  <!-- İstatistikler -->
-  <div class="ist bolum-sik">
-    <div class="kap">
-      <div class="ist-grid" id="ist-grid">
-        <div class="ist-kutu"><div class="ist-sayi" data-sayac="5000" data-son="+">0</div><div class="ist-etiket">Öğrenci yetiştirdik</div></div>
-        <div class="ist-kutu"><div class="ist-sayi" id="ist-program" data-sayac="17" data-son="">0</div><div class="ist-etiket">Aktif program</div></div>
-        <div class="ist-kutu"><div class="ist-sayi" data-sayac="5" data-son="">0</div><div class="ist-etiket">Grup başına öğrenci</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Online eğitim -->
-  <div class="bolum online-bant">
-    <div class="kap">
-      <div class="online-ic">
-        <div class="online-metin">
-          <span class="kicker">İki seçenek, tek program</span>
-          <h2>Gelibolu'daysanız merkezimizde,<br>değilseniz online.</h2>
-          <p>Gelibolu ve çevresinde oturan öğrenciler derslere merkezimizde yüz yüze katılır. Şehir dışındaki öğrenciler ise aynı programı, aynı öğretmenlerle canlı ders platformumuz üzerinden alır. İçerik, ders saati ve kontenjan değişmez: online gruplarda da mevcut 5 kişidir, ders kaydı sonradan tekrar izlenebilir ve veli süreci K12 paneli üzerinden aynı şekilde takip eder.</p>
-          <div class="online-madde">
-            <span>Yüz yüze · Gelibolu</span>
-            <span>Canlı online ders</span>
-            <span>Ders kaydı tekrar izlenir</span>
-            <span>5 kişilik gruplar</span>
-            <span>K12 veli paneli</span>
-          </div>
-        </div>
-        <div class="online-kutu">
-          <div class="online-ikon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="14" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>
-          </div>
-          <b>Ücretsiz tanışma dersi</b>
-          <p>Online ders düzenini görmek için ilk dersi ücretsiz deneyebilirsiniz.</p>
-          <a class="dg dg-turkuaz" href="#" data-wa="Merhaba, online ders hakkında bilgi almak istiyorum.">WhatsApp'tan yazın</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Öne çıkan kurslar -->
-  <!-- Öne çıkan kurslar -->
-  <div class="bolum">
-    <div class="kap">
-      <div class="bolum-basi bolum-basi-satir" style="max-width:none">
-        <div style="max-width:620px">
-          <span class="kicker">Öne çıkan programlar</span>
-          <h2>Bu dönem en çok tercih edilen üç program</h2>
-          <p>Grup mevcutlarımız 5 kişiliktir, bu yüzden kontenjanlar erken dolar.</p>
-        </div>
-        <a class="dg dg-cizgi" href="#/kurslar">Tüm kursları gör</a>
-      </div>
-      <div class="kurs-grid" id="one-cikan-grid"></div>
-    </div>
-  </div>
-
-  <!-- Kategoriler -->
-  <div class="bolum" style="background:var(--krem); border-block:1px solid var(--cizgi)">
+  <!-- 1. Programlar -->
+  <div class="bolum" id="programlar" data-bolum="programlar">
     <div class="kap">
       <div class="bolum-basi">
-        <span class="kicker">Kategoriler</span>
-        <h2>Hangi alanda destek arıyorsunuz?</h2>
-        <p>Bir kategoriyi seçtiğinizde kurs listesi doğrudan o alana göre filtrelenir.</p>
+        <span class="kicker">Programlar</span>
+        <h2>Öğrenciniz hangi programa ihtiyaç duyuyor?</h2>
+        <p>Üç ana programımız var. Hangisinin uygun olduğundan emin değilseniz tanışma dersinde birlikte belirleriz.</p>
       </div>
-      <div class="kat-grid" id="kat-grid"></div>
+
+      <div class="prog-grid">
+        <a class="prog" href="#/kurslar?kategori=temel">
+          <span class="prog-ust">
+            <span class="prog-ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 016.5 4H11v16H6.5A2.5 2.5 0 014 17.5z"/><path d="M20 6.5A2.5 2.5 0 0017.5 4H13v16h4.5a2.5 2.5 0 002.5-2.5z"/><path d="M7 9h2M15 9h2M7 13h2M15 13h2"/></svg></span>
+            <span class="prog-sinif">2–7. sınıf</span>
+          </span>
+          <h3>İlkokul ve ortaokul desteği</h3>
+          <p>Okul dersleriyle paralel ilerler; eksik konular kapanır, düzenli çalışma alışkanlığı oturur.</p>
+          <ul class="prog-liste temiz">
+            <li>İlkokul haftada 5, ortaokul haftada 8 saat</li>
+            <li>En fazla 5 kişilik grup</li>
+          </ul>
+          <span class="prog-bag">Programı incele <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <a class="prog" href="#/kurs/lgs-hazirlik-8-sinif">
+          <span class="prog-ust">
+            <span class="prog-ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 10v6"/></svg></span>
+            <span class="prog-sinif">8. sınıf</span>
+          </span>
+          <h3>LGS hazırlık</h3>
+          <p>Altı dersin tamamı konu sırasıyla işlenir; iki haftada bir deneme ve bire bir analiz görüşmesi yapılır.</p>
+          <ul class="prog-liste temiz">
+            <li>Haftada 8 saat</li>
+            <li>En fazla 5 kişilik grup</li>
+          </ul>
+          <span class="prog-bag">Programı incele <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <a class="prog" href="#/kurslar?kategori=ingilizce-kursu">
+          <span class="prog-ust">
+            <span class="prog-ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M9 14l3-7 3 7M10 12h4"/></svg></span>
+            <span class="prog-sinif">2–8. sınıf</span>
+          </span>
+          <h3>İngilizce</h3>
+          <p>Dinleme, konuşma, okuma ve yazma birlikte gelişir; küçük grupta her öğrenci konuşma pratiği yapar.</p>
+          <ul class="prog-liste temiz">
+            <li>Haftada 3 saat · 35 hafta</li>
+            <li>En fazla 5 kişilik grup</li>
+          </ul>
+          <span class="prog-bag">Programı incele <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+
+      <p class="prog-diger">Özel ders, eğitim koçluğu ve gelişim programları mı arıyorsunuz?
+        <a href="#/kurslar">Diğer programlar <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </p>
     </div>
   </div>
 
-  <!-- Çağrı -->
-  <div class="bolum">
+  <!-- 2. Nasıl işliyor? -->
+  <div class="bolum bolum-krem" id="nasil" data-bolum="nasil-isliyor">
     <div class="kap">
-      <div class="cagri">
-        <div class="cagri-doku kareli-beyaz"></div>
-        <div class="cagri-ic">
-          <div>
-            <span class="cagri-rozet">YENİ DÖNEM KAYITLARI</span>
-            <h2>Hemen başlayın, dönem başında öne geçin.</h2>
-            <p>Ücretsiz tanışma dersine katılın, öğrencinize uygun grubu birlikte belirleyelim. Kayıt, ücret ve ödeme bilgisi için WhatsApp'tan yazmanız yeterlidir.</p>
+      <div class="bolum-basi">
+        <span class="kicker">Nasıl işliyor?</span>
+        <h2>Eğitim nasıl ilerliyor?</h2>
+        <p>Kayıttan önce ne olacağını ve sonrasında neyi takip edeceğinizi baştan bilin.</p>
+      </div>
+
+      <ol class="adimlar temiz">
+        <li class="adim">
+          <span class="adim-no">1</span>
+          <h3>Ücretsiz tanışma dersi</h3>
+          <p>Öğrenciniz bir derse ücretsiz katılır, seviyesini birlikte değerlendiririz. Dersin ardından karar vermekte özgürsünüz.</p>
+        </li>
+        <li class="adim">
+          <span class="adim-no">2</span>
+          <h3>Öğrenciye uygun programın belirlenmesi</h3>
+          <p>Sınıfına ve ihtiyacına göre uygun programı, grubu ve ders saatlerini sizinle birlikte belirleriz.</p>
+        </li>
+        <li class="adim">
+          <span class="adim-no">3</span>
+          <h3>Ders ve gelişimin düzenli takibi</h3>
+          <p>Ders, ödev ve devamsızlığı K12 panelinden izlersiniz; her ay yazılı gelişim raporu alırsınız.</p>
+        </li>
+      </ol>
+
+      <div class="plan-kutu">
+        <div>
+          <h3>Tanışma dersi nasıl planlanıyor?</h3>
+          <p>Formu doldurun ya da WhatsApp'tan yazın; öğrencinizin sınıfına ve size uygun gün ve saate göre dersi birlikte planlarız. Şehir dışındaysanız tanışma dersi canlı online yapılır.</p>
+        </div>
+        <a class="dg dg-sari" href="#/tanisma-dersi" data-tanisma data-konum="nasil-isliyor">Ücretsiz tanışma dersi planla</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Neden İDOL? -->
+  <div class="bolum" id="neden" data-bolum="neden-idol">
+    <div class="kap">
+      <div class="bolum-basi">
+        <span class="kicker">Neden İDOL?</span>
+        <h2>Vaat değil, görebileceğiniz uygulamalar</h2>
+      </div>
+
+      <div class="neden-grid">
+        <div class="neden">
+          <span class="neden-ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19.5v-1.2A4.3 4.3 0 017.1 14h3.8a4.3 4.3 0 014.3 4.3v1.2"/><path d="M15.6 5a3.2 3.2 0 010 6.1M18.4 14.3a4.3 4.3 0 012.8 4v1.2"/></svg></span>
+          <h3>En fazla 5 kişilik gruplar</h3>
+          <p>Öğretmen her öğrenciyi tek tek dinler ve defterini kontrol eder. İhtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da açılır.</p>
+        </div>
+        <div class="neden">
+          <span class="neden-ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="14" height="14" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg></span>
+          <h3>Gelibolu'da yüz yüze veya canlı online ders</h3>
+          <p>Şehir dışındaki öğrenciler aynı programı, aynı öğretmenlerle canlı alır. Ders kaydı sonradan tekrar izlenebilir.</p>
+        </div>
+        <div class="neden">
+          <span class="neden-ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7.5 15.5v-3M12 15.5v-7M16.5 15.5v-5"/></svg></span>
+          <h3>Veli için K12 üzerinden takip</h3>
+          <p>Ders, ödev, konu ilerlemesi ve devamsızlığı kendi panelinizden görürsünüz. Her ay yazılı rapor, dönemde iki kez bire bir görüşme.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Veli yorumları: YORUMLAR listesi boşsa ve taslak modu kapalıysa bu bölüm hiç görünmez -->
+  <div class="bolum bolum-krem" id="yorumlar" data-bolum="yorumlar" hidden>
+    <div class="kap">
+      <div class="bolum-basi">
+        <span class="kicker">Veli yorumları</span>
+        <h2>Velilerimiz ne diyor?</h2>
+        <p id="yorum-aciklama">Yorumlar velilerimizin izniyle yayımlanır.</p>
+      </div>
+      <div class="yorum-grid" id="yorum-grid"></div>
+    </div>
+  </div>
+
+  <!-- 5. Sık sorulan sorular -->
+  <div class="bolum" id="sss" data-bolum="sss">
+    <div class="kap sss-kap">
+      <div class="bolum-basi">
+        <span class="kicker">Sık sorulan sorular</span>
+        <h2>Karar vermeden önce</h2>
+        <p>Aradığınız yanıt burada yoksa bize yazın.</p>
+        <a class="dg dg-cizgi" style="margin-top:22px" href="#" data-wa="Merhaba, bir sorum var." data-konum="sss">
+          <svg class="wa-ikon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ik-wa"/></svg>
+          WhatsApp'tan sorun
+        </a>
+      </div>
+      <div class="blok sss-blok" id="ana-sss"></div>
+    </div>
+  </div>
+
+  <!-- 6. Son çağrı ve iletişim -->
+  <div class="bolum son-bolum" id="son-cagri" data-bolum="son-cagri">
+    <div class="kap">
+      <div class="son">
+        <div class="son-doku kareli-beyaz" aria-hidden="true"></div>
+        <div class="son-ic">
+          <h2>Öğrenciniz için uygun programı birlikte belirleyelim.</h2>
+          <div class="son-dgler">
+            <a class="dg dg-sari dg-buyuk" href="#/tanisma-dersi" data-tanisma data-konum="son-cagri">Ücretsiz tanışma dersi planla</a>
+            <a class="dg dg-hayalet dg-buyuk" href="tel:+905415669875" data-konum="son-cagri">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#ik-tel"/></svg>
+              0541 566 98 75'i ara
+            </a>
           </div>
-          <div class="cagri-dgler">
-            <a class="dg dg-sari" href="#" data-wa="Merhaba, kayıt hakkında bilgi almak istiyorum.">WhatsApp'tan kayıt ol</a>
-            <a class="dg dg-hayalet" href="tel:+905415669875">0541 566 98 75</a>
+        </div>
+      </div>
+
+      <div class="son-bilgi">
+        <a class="son-kutu" href="https://www.google.com/maps/search/?api=1&query=Yaz%C4%B1c%C4%B1zade%20Mahallesi%20Hac%C4%B1%20Zeki%20Sokak%20No%3A4%20Gelibolu%20%C3%87anakkale" target="_blank" rel="noopener">
+          <span class="son-ikon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span>
+            <span class="son-baslik">Adres</span>
+            <b>Yazıcızade Mah. Hacı Zeki Sok. No: 4</b>
+            <span class="son-alt">Gelibolu / Çanakkale · <u>Haritada aç</u></span>
+          </span>
+        </a>
+        <div class="son-kutu">
+          <span class="son-ikon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div style="flex:1">
+            <span class="son-baslik">Çalışma saatleri</span>
+            <ul class="son-saat temiz">
+              <li><span>Pazartesi–Cuma</span><b>09.00–20.00</b></li>
+              <li><span>Cumartesi</span><b>09.00–18.00</b></li>
+              <li><span>Pazar</span><b>Deneme günlerinde açık</b></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -692,8 +1029,8 @@ ul.temiz{list-style:none; padding:0; margin:0}
 <section class="sayfa" id="sayfa-kurslar">
   <div class="sayfa-basi">
     <div class="kap">
-      <div class="iz" id="kurslar-iz"><a href="#/">Ana Sayfa</a> <span>/</span> <span>Kurslar</span></div>
-      <h1 id="kurslar-baslik">Kurslar</h1>
+      <div class="iz" id="kurslar-iz"><a href="#/">Ana Sayfa</a> <span>/</span> <span>Programlar</span></div>
+      <h1 id="kurslar-baslik">Programlar</h1>
       <p id="kurslar-aciklama">LGS hazırlık, İngilizce kursu programlarımız, eğitim koçluğu, branş bazında özel derslerimiz, gelişim programlarımız ve kamplarımız burada listelenir. Filtreleri kullanarak size uygun olanı daraltabilirsiniz.</p>
     </div>
   </div>
@@ -706,6 +1043,7 @@ ul.temiz{list-style:none; padding:0; margin:0}
         </div>
         <div class="filtre-satir">
           <div class="filtre-grup" id="kat-filtre"><b>Kategori</b></div>
+          <div class="filtre-grup" id="teslim-filtre"><b>Katılım</b></div>
         </div>
       </div>
       <div class="sonuc-satir">
@@ -1241,7 +1579,7 @@ ul.temiz{list-style:none; padding:0; margin:0}
           <li><a href="mailto:idolenglishegitim@gmail.com">idolenglishegitim@gmail.com</a></li>
           <li><a href="https://www.google.com/maps/search/?api=1&query=Yaz%C4%B1c%C4%B1zade%20Mahallesi%20Hac%C4%B1%20Zeki%20Sokak%20No%3A4%20Gelibolu%20%C3%87anakkale" target="_blank" rel="noopener">Yazıcızade Mah. Hacı Zeki Sok. No: 4<br>Gelibolu / ÇANAKKALE</a></li>
         </ul>
-        <a class="dg dg-sari dg-kck" style="margin-top:18px" href="#" data-wa="Merhaba, kayıt için bilgi almak istiyorum.">Kayıt için yazın</a>
+        <a class="dg dg-sari dg-kck" style="margin-top:18px" href="#/tanisma-dersi" data-tanisma data-konum="alt-bilgi">Ücretsiz tanışma dersi planla</a>
       </div>
     </div>
     <div class="alt-serit">
@@ -1251,9 +1589,92 @@ ul.temiz{list-style:none; padding:0; margin:0}
   </div>
 </footer>
 
-<a class="yuzen-wa" href="#" data-wa="Merhaba, İDOL SEGEM programları hakkında bilgi almak istiyorum." aria-label="WhatsApp'tan yazın">
+<a class="yuzen-wa" href="#" data-konum="yuzen-dugme" data-wa="Merhaba, İDOL SEGEM programları hakkında bilgi almak istiyorum." aria-label="WhatsApp'tan yazın">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.3A10 10 0 1012 2zm5.6 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6a11 11 0 01-4.3-3.9c-.3-.5-.7-1.2-.7-2s.4-1.2.6-1.4c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.7c0 .2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.4.7 1.2 1.5 1.9 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6 0 1z"/></svg>
 </a>
+
+<!-- Ortak ikonlar -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ik-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.3A10 10 0 1012 2zm5.6 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6a11 11 0 01-4.3-3.9c-.3-.5-.7-1.2-.7-2s.4-1.2.6-1.4c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.7c0 .2.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.3 0 .5.2.4.7 1.2 1.5 1.9 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6 0 1z"/></symbol>
+  <symbol id="ik-tel" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></symbol>
+</svg>
+
+<!-- Mobil sabit çubuk: tanışma dersi + WhatsApp kısayolu -->
+<div class="mobil-cubuk" id="mobil-cubuk">
+  <a class="dg dg-sari" href="#/tanisma-dersi" data-tanisma data-konum="mobil-cubuk">Tanışma dersi</a>
+  <a class="mobil-wa" href="#" data-wa="Merhaba, İDOL SEGEM programları hakkında bilgi almak istiyorum." data-konum="mobil-cubuk" aria-label="WhatsApp'tan yazın">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ik-wa"/></svg>
+  </a>
+</div>
+
+<!-- Tanışma dersi formu -->
+<dialog class="td" id="td" aria-labelledby="td-baslik">
+  <div class="td-ic">
+    <button class="td-kapat" id="td-kapat" type="button" aria-label="Kapat">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <form id="td-form" novalidate>
+      <h2 id="td-baslik">Ücretsiz tanışma dersi planlayın</h2>
+      <p class="td-alt">Bilgilerinizi bırakın; öğrencinize uygun gün ve saati birlikte belirleyelim.</p>
+
+      <div class="form-uyari" id="td-uyari" role="alert"></div>
+
+      <div class="alan-ikili">
+        <div class="alan"><label for="td-ad">Veli adı soyadı</label><input id="td-ad" type="text" autocomplete="name" required></div>
+        <div class="alan"><label for="td-tel">Telefon</label><input id="td-tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx" required></div>
+      </div>
+      <div class="alan-ikili">
+        <div class="alan">
+          <label for="td-sinif">Öğrencinin sınıfı</label>
+          <select id="td-sinif" required>
+            <option value="">Seçiniz</option>
+            <option>2. sınıf</option><option>3. sınıf</option><option>4. sınıf</option><option>5. sınıf</option>
+            <option>6. sınıf</option><option>7. sınıf</option><option>8. sınıf</option>
+          </select>
+        </div>
+        <div class="alan">
+          <label for="td-program">İlgilendiğiniz program</label>
+          <select id="td-program">
+            <option value="">Henüz emin değilim</option>
+            <option>İlkokul ve ortaokul desteği</option>
+            <option>LGS hazırlık</option>
+            <option>İngilizce</option>
+            <option>Özel ders</option>
+            <option>Eğitim koçluğu</option>
+            <option>Gelişim programları</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="td-secim">
+        <legend>Derse nasıl katılacaksınız?</legend>
+        <div class="td-secim-ic">
+          <label><input type="radio" name="td-katilim" value="Gelibolu'da yüz yüze" checked><span>Gelibolu'da yüz yüze</span></label>
+          <label><input type="radio" name="td-katilim" value="Canlı online"><span>Canlı online</span></label>
+        </div>
+      </fieldset>
+
+      <div class="alan"><label for="td-zaman">Uygun gün ve saat <i>(isteğe bağlı)</i></label><input id="td-zaman" type="text" placeholder="Örneğin: hafta içi 16.00 sonrası"></div>
+
+      <label class="onay" for="td-kvkk">
+        <input type="checkbox" id="td-kvkk">
+        <span>Kişisel verilerimin, tanışma dersi talebimi yanıtlamak amacıyla <a href="#/kvkk" id="td-kvkk-bag">KVKK Aydınlatma Metni</a> kapsamında işlenmesine açık rıza veriyorum.</span>
+      </label>
+
+      <button class="dg dg-sari dg-buyuk" type="submit" style="width:100%">Talebi gönder</button>
+      <p class="kayit-not" style="margin-top:12px">Gönder'e bastığınızda talebiniz WhatsApp'ta hazır mesaj olarak açılır; göndermeden önce düzenleyebilirsiniz.</p>
+    </form>
+
+    <div class="td-tamam" id="td-tamam" hidden>
+      <span class="td-tamam-ikon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+      <h2>Mesajınız WhatsApp'ta hazır</h2>
+      <p>Açılan WhatsApp penceresinde <b>Gönder</b>'e bastığınızda talebiniz bize ulaşır. Gün ve saati oradan birlikte netleştiririz.</p>
+      <a class="dg dg-turkuaz" id="td-tekrar" href="#" target="_blank" rel="noopener">WhatsApp açılmadıysa buraya dokunun</a>
+      <p class="kayit-not" style="margin-top:14px">Dilerseniz doğrudan arayın: <a href="tel:+905415669875" data-konum="tanisma-formu" style="color:var(--mavi-derin); font-weight:700">0541 566 98 75</a></p>
+    </div>
+  </div>
+</dialog>
 
 <script>
 /* ==================================================================
@@ -1284,7 +1705,20 @@ const KURUM = {
   pixelId:'1397193768936891',
   /* PayTR üye işyeri onayı gelip ortam değişkenleri girilene kadar false bırakın.
      false iken ödeme sayfası form yerine bilgilendirme gösterir. */
-  odemeAktif:false
+  odemeAktif:false,
+
+  /* ---- Ana sayfa ayarları ----------------------------------------- */
+  /* İlk ekrandaki fotoğraf. Kurumun kendi sınıfından, öğretmen ve öğrencileri
+     gösteren yatay bir kare yükleyip yolunu yazın (ör. 'foto/sinif.jpg').
+     Boş bırakılırsa geçici çizim gösterilir. Öğrenci görüntüsü için veli izni alın. */
+  heroFoto:'',
+  heroFotoAlt:'İDOL SEGEM Gelibolu merkezinde küçük grup dersi',
+  /* true iken taslak notları (fotoğraf alanı, yorum kutuları) görünür.
+     YAYINA ALMADAN ÖNCE false YAPIN. */
+  taslakModu:false,
+  /* İlk ekran A/B testi: true olursa ziyaretçilerin yarısına ana düğme olarak
+     "WhatsApp'tan bilgi al" gösterilir. Kapalıyken herkes "Ücretsiz tanışma dersi planla"yı görür. */
+  heroTest:false
 };
 
 /* ---- Kategoriler -------------------------------------------------- */
@@ -1640,19 +2074,19 @@ const kacar = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'
 ------------------------------------------------------------------- */
 const SAHNE = {
   'ilkokul-destek':`
-    <rect x="66" y="150" width="54" height="54" rx="10" fill="#FFC93C" opacity=".95"/>
+    <rect x="66" y="150" width="54" height="54" rx="10" fill="#D5F1FB" opacity=".95"/>
     <rect x="130" y="150" width="54" height="54" rx="10" fill="#fff" opacity=".55"/>
     <rect x="98" y="92" width="54" height="54" rx="10" fill="#fff" opacity=".8"/>
     <path d="M228 60h108a12 12 0 0112 12v112a12 12 0 01-12 12H228a12 12 0 01-12-12V72a12 12 0 0112-12z" fill="#fff" opacity=".9"/>
     <g stroke="#0B4C74" stroke-width="4.4" stroke-linecap="round" opacity=".38">
       <path d="M244 92h76M244 118h76M244 144h50"/>
     </g>
-    <circle cx="282" cy="176" r="10" fill="#FFC93C"/>
+    <circle cx="282" cy="176" r="10" fill="#D5F1FB"/>
     <path d="M40 216h320" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity=".45"/>`,
   'ortaokul-destek':`
     <rect x="72" y="168" width="150" height="22" rx="6" fill="#fff" opacity=".9"/>
     <rect x="84" y="140" width="126" height="22" rx="6" fill="#fff" opacity=".68"/>
-    <rect x="96" y="112" width="102" height="22" rx="6" fill="#FFC93C" opacity=".92"/>
+    <rect x="96" y="112" width="102" height="22" rx="6" fill="#D5F1FB" opacity=".92"/>
     <path d="M258 74h84a12 12 0 0112 12v104a12 12 0 01-12 12h-84a12 12 0 01-12-12V86a12 12 0 0112-12z" fill="#fff" opacity=".88"/>
     <g stroke="#0B4C74" stroke-width="4" stroke-linecap="round" opacity=".36">
       <path d="M270 104h60M270 128h60M270 152h40"/>
@@ -1662,19 +2096,19 @@ const SAHNE = {
   'lgs-hazirlik-8-sinif':`
     <circle cx="300" cy="80" r="46" fill="none" stroke="#fff" stroke-width="3" opacity=".30"/>
     <circle cx="300" cy="80" r="29" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
-    <circle cx="300" cy="80" r="12" fill="#FFC93C" opacity=".92"/>
+    <circle cx="300" cy="80" r="12" fill="#D5F1FB" opacity=".92"/>
     <path d="M232 128l52-38" stroke="#fff" stroke-width="3.4" stroke-linecap="round" opacity=".7"/>
     <path d="M232 128l6-19 13 6z" fill="#fff" opacity=".7"/>
     <rect x="72"  y="168" width="30" height="44" rx="5" fill="#fff" opacity=".34"/>
     <rect x="112" y="146" width="30" height="66" rx="5" fill="#fff" opacity=".52"/>
     <rect x="152" y="118" width="30" height="94" rx="5" fill="#fff" opacity=".70"/>
-    <rect x="192" y="88"  width="30" height="124" rx="5" fill="#FFC93C" opacity=".90"/>`,
+    <rect x="192" y="88"  width="30" height="124" rx="5" fill="#D5F1FB" opacity=".90"/>`,
   'egitim-koclugu':`
     <path d="M52 202C96 202 108 92 176 92s84 76 172 42" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 11" opacity=".5"/>
     <circle cx="88" cy="186" r="13" fill="#fff" opacity=".6"/>
     <circle cx="176" cy="96" r="13" fill="#fff" opacity=".75"/>
     <circle cx="266" cy="140" r="13" fill="#fff" opacity=".6"/>
-    <circle cx="330" cy="120" r="19" fill="#FFC93C" opacity=".95"/>
+    <circle cx="330" cy="120" r="19" fill="#D5F1FB" opacity=".95"/>
     <path d="M322 120l6 7 12-14" fill="none" stroke="#0B4C74" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="44" y="52" width="96" height="70" rx="12" fill="#fff" opacity=".85"/>
     <g stroke="#0B4C74" stroke-width="3.6" stroke-linecap="round" opacity=".42">
@@ -1696,8 +2130,8 @@ const SAHNE = {
     </g>
     <path d="M40 210V56" stroke="#fff" stroke-width="3.4" stroke-linecap="round" opacity=".75"/>
     <path d="M40 210h206" stroke="#fff" stroke-width="3.4" stroke-linecap="round" opacity=".75"/>
-    <path d="M52 196C96 82 152 76 236 190" fill="none" stroke="#FFC93C" stroke-width="5" stroke-linecap="round" opacity=".95"/>
-    <circle cx="144" cy="104" r="7" fill="#FFC93C"/>
+    <path d="M52 196C96 82 152 76 236 190" fill="none" stroke="#D5F1FB" stroke-width="5" stroke-linecap="round" opacity=".95"/>
+    <circle cx="144" cy="104" r="7" fill="#D5F1FB"/>
     <path d="M292 200h96l-48-92z" fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round" opacity=".8"/>
     <path d="M292 200v-14h14" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
     <path d="M318 158a30 30 0 0044 0" fill="none" stroke="#fff" stroke-width="2.6" opacity=".55"/>`,
@@ -1706,7 +2140,7 @@ const SAHNE = {
     <ellipse cx="196" cy="112" rx="76" ry="30" fill="none" stroke="#fff" stroke-width="3.2" opacity=".5"/>
     <ellipse cx="196" cy="112" rx="76" ry="30" fill="none" stroke="#fff" stroke-width="3.2" opacity=".5" transform="rotate(60 196 112)"/>
     <ellipse cx="196" cy="112" rx="76" ry="30" fill="none" stroke="#fff" stroke-width="3.2" opacity=".5" transform="rotate(120 196 112)"/>
-    <circle cx="196" cy="112" r="11" fill="#FFC93C" opacity=".95"/>
+    <circle cx="196" cy="112" r="11" fill="#D5F1FB" opacity=".95"/>
     <path d="M300 150h34v20l24 44a10 10 0 01-9 15h-64a10 10 0 01-9-15l24-44z" fill="#fff" opacity=".82"/>
     <path d="M290 196h54l14 26a8 8 0 01-7 12h-68a8 8 0 01-7-12z" fill="#4FC9EC" opacity=".9"/>
     <rect x="296" y="142" width="42" height="9" rx="4" fill="#fff" opacity=".9"/>`,
@@ -1720,7 +2154,7 @@ const SAHNE = {
     <circle cx="110" cy="82" r="4.4" fill="#0B4C74" opacity=".3"/>
     <circle cx="110" cy="140" r="4.4" fill="#0B4C74" opacity=".3"/>
     <circle cx="110" cy="198" r="4.4" fill="#0B4C74" opacity=".3"/>
-    <path d="M286 64l30 30-116 116-40 10 10-40z" fill="#FFC93C" opacity=".92"/>
+    <path d="M286 64l30 30-116 116-40 10 10-40z" fill="#D5F1FB" opacity=".92"/>
     <path d="M286 64l30 30" stroke="#0B4C74" stroke-width="3" opacity=".35"/>
     <path d="M170 220l-10-40 40 10z" fill="#fff" opacity=".55"/>`,
 
@@ -1732,7 +2166,7 @@ const SAHNE = {
     <rect x="248" y="106" width="17" height="80" rx="3" fill="#fff" opacity=".8"/>
     <rect x="122" y="190" width="160" height="14" rx="4" fill="#fff" opacity=".92"/>
     <path d="M40 226h330" stroke="#fff" stroke-width="2.6" opacity=".4"/>
-    <circle cx="90"  cy="226" r="6" fill="#FFC93C" opacity=".95"/>
+    <circle cx="90"  cy="226" r="6" fill="#D5F1FB" opacity=".95"/>
     <circle cx="200" cy="226" r="6" fill="#fff" opacity=".7"/>
     <circle cx="310" cy="226" r="6" fill="#fff" opacity=".7"/>`,
 
@@ -1745,7 +2179,7 @@ const SAHNE = {
       <rect x="164" y="88" width="72" height="72" rx="4"/>
       <rect x="164" y="88" width="72" height="72" rx="4" transform="rotate(45 200 124)"/>
     </g>
-    <circle cx="200" cy="124" r="17" fill="#FFC93C" opacity=".9"/>
+    <circle cx="200" cy="124" r="17" fill="#D5F1FB" opacity=".9"/>
     <path d="M60 208c26-26 52 26 78 0s52 26 78 0 52 26 78 0" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" opacity=".5"/>`,
 
   'ahob-anlayarak-hizli-okuma':`
@@ -1754,7 +2188,7 @@ const SAHNE = {
     <ellipse cx="200" cy="130" rx="52" ry="32" fill="none" stroke="#0B4C74" stroke-width="4" opacity=".55"/>
     <circle cx="200" cy="130" r="15" fill="#0B4C74" opacity=".62"/>
     <circle cx="205" cy="125" r="5" fill="#fff" opacity=".9"/>
-    <path d="M40 104h50M28 130h62M40 156h50" stroke="#FFC93C" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+    <path d="M40 104h50M28 130h62M40 156h50" stroke="#D5F1FB" stroke-width="5" stroke-linecap="round" opacity=".85"/>
     <path d="M310 104h50M310 130h62M310 156h50" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".6"/>`,
 
 
@@ -1763,10 +2197,10 @@ const SAHNE = {
     <g fill="none" stroke="#0B4C74" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".42">
       <path d="M154 78h92M154 78v40M246 78v92M154 118h58M212 118v52M154 146v44M154 190h62M246 170h-30"/>
     </g>
-    <circle cx="154" cy="78" r="8" fill="#FFC93C"/>
+    <circle cx="154" cy="78" r="8" fill="#D5F1FB"/>
     <circle cx="216" cy="190" r="8" fill="#0AA3DD" opacity=".85"/>
     <g>
-      <rect x="44" y="72" width="52" height="52" rx="11" fill="#FFC93C"/>
+      <rect x="44" y="72" width="52" height="52" rx="11" fill="#D5F1FB"/>
       <rect x="44" y="140" width="52" height="52" rx="11" fill="#fff" opacity=".38"/>
       <rect x="308" y="72" width="52" height="52" rx="11" fill="#fff" opacity=".38"/>
       <rect x="308" y="140" width="52" height="52" rx="11" fill="#fff" opacity=".55"/>
@@ -1776,8 +2210,8 @@ const SAHNE = {
     </g>`,
 
   'yaz-kampi':`
-    <circle cx="312" cy="66" r="30" fill="#FFC93C" opacity=".95"/>
-    <g stroke="#FFC93C" stroke-width="4" stroke-linecap="round" opacity=".7">
+    <circle cx="312" cy="66" r="30" fill="#D5F1FB" opacity=".95"/>
+    <g stroke="#D5F1FB" stroke-width="4" stroke-linecap="round" opacity=".7">
       <path d="M312 20v12M312 100v12M266 66h-12M370 66h12M279 33l9 9M336 90l9 9M279 99l9-9M336 42l9-9"/>
     </g>
     <path d="M152 200L206 96l54 104z" fill="#fff" opacity=".9"/>
@@ -1791,20 +2225,20 @@ const SAHNE = {
 /* Kurs sahnesi yoksa kategori sahnesi kullanılır */
 const SAHNE_KATEGORI = {
   temel:`
-    <rect x="96" y="150" width="60" height="56" rx="10" fill="#FFC93C" opacity=".92"/>
+    <rect x="96" y="150" width="60" height="56" rx="10" fill="#D5F1FB" opacity=".92"/>
     <rect x="168" y="118" width="60" height="88" rx="10" fill="#fff" opacity=".6"/>
     <rect x="240" y="86" width="60" height="120" rx="10" fill="#fff" opacity=".85"/>`,
   etut:`
     <rect x="90" y="70" width="180" height="130" rx="14" fill="#fff" opacity=".9"/>
     <path d="M110 100h140M110 130h140M110 160h90" stroke="#0B4C74" stroke-width="4" stroke-linecap="round" opacity=".35"/>
-    <path d="M270 60l40 40-90 90-46 6 6-46z" fill="#FFC93C" opacity=".95"/>`,
+    <path d="M270 60l40 40-90 90-46 6 6-46z" fill="#D5F1FB" opacity=".95"/>`,
   'ingilizce-kursu':`
     <path d="M120 70c26-16 54-18 80-6v122c-26-12-54-10-80 6z" fill="#fff" opacity=".9"/>
     <path d="M280 70c-26-16-54-18-80-6v122c26-12 54-10 80 6z" fill="#fff" opacity=".65"/>
     <path d="M200 64v122" stroke="#0B4C74" stroke-width="3" opacity=".3"/>`,
   kocluk:`
     <path d="M54 198C100 198 112 96 178 96s86 74 168 40" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 11" opacity=".5"/>
-    <circle cx="330" cy="124" r="19" fill="#FFC93C" opacity=".95"/>
+    <circle cx="330" cy="124" r="19" fill="#D5F1FB" opacity=".95"/>
     <path d="M322 124l6 7 12-14" fill="none" stroke="#0B4C74" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>`,
   'ozel-ders':`
     <circle cx="150" cy="112" r="42" fill="#fff" opacity=".85"/>
@@ -1815,13 +2249,13 @@ const SAHNE_KATEGORI = {
     <path d="M200 66c-28 0-50 20-52 46-18 8-30 26-26 46 4 20 22 34 42 32v18a11 11 0 0011 11h50a11 11 0 0011-11v-18c20 2 38-12 42-32 4-20-8-38-26-46-2-26-24-46-52-46z" fill="#fff" opacity=".88"/>
     <path d="M200 86v116" stroke="#0B4C74" stroke-width="3.4" opacity=".38"/>`,
   kamp:`
-    <circle cx="300" cy="80" r="34" fill="#FFC93C" opacity=".92"/>
+    <circle cx="300" cy="80" r="34" fill="#D5F1FB" opacity=".92"/>
     <path d="M120 196L172 98l52 98z" fill="#fff" opacity=".88"/>
     <path d="M40 210h320" stroke="#fff" stroke-width="3.4" stroke-linecap="round" opacity=".55"/>`,
   lgs:`
     <circle cx="200" cy="112" r="54" fill="none" stroke="#fff" stroke-width="4" opacity=".4"/>
     <circle cx="200" cy="112" r="32" fill="none" stroke="#fff" stroke-width="4" opacity=".6"/>
-    <circle cx="200" cy="112" r="13" fill="#FFC93C" opacity=".92"/>`
+    <circle cx="200" cy="112" r="13" fill="#D5F1FB" opacity=".92"/>`
 };
 
 function kapakIci(k){
@@ -1886,44 +2320,9 @@ function kursKarti(k){
 
 /* ---- Ana sayfa doldurma ------------------------------------------- */
 function anaSayfayiKur(){
-  $('#one-cikan-grid').innerHTML = KURSLAR.filter(k=>k.oneCikan).slice(0,3).map(kursKarti).join('');
-  $('#kat-grid').innerHTML = KATEGORILER.map(K=>{
-    const adet = KURSLAR.filter(k=>k.kategori===K.id).length;
-    return `<a class="kat-kutu" href="#/kurslar?kategori=${K.id}">
-      <span class="kat-ikon" style="background:${K.renk}">${ikon(K.id).replace('class="ikon"','')}</span>
-      <span><h3>${kacar(K.ad)}</h3><p>${adet} program · ${kacar(K.aciklama)}</p></span>
-    </a>`;
-  }).join('');
   $('#alt-programlar').innerHTML = KURSLAR.slice(0,6).map(k=>`<li><a href="#/kurs/${k.slug}">${kacar(k.ad)}</a></li>`).join('');
   const sec = $('#f-program');
   sec.innerHTML = '<option value="">Seçiniz</option>' + KURSLAR.map(k=>`<option>${kacar(k.ad)}</option>`).join('');
-}
-
-/* ---- Sayaç animasyonu --------------------------------------------- */
-function sayaclariBaslat(){
-  /* "Aktif program" sayısı elle değil, KURSLAR listesinden gelir */
-  const programSayac = $('#ist-program');
-  if(programSayac) programSayac.dataset.sayac = KURSLAR.length;
-  const kutular = $$('[data-sayac]');
-  if(!kutular.length) return;
-  const azHareket = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const yaz = (el,v)=> el.textContent = (el.dataset.on||'') + paraFmt(v) + (el.dataset.son||'');
-  const calistir = el=>{
-    const hedef = +el.dataset.sayac;
-    if(azHareket){ yaz(el,hedef); return; }
-    const sure=1100, bas=performance.now();
-    const adim = t=>{
-      const o = Math.min((t-bas)/sure,1);
-      yaz(el, Math.round(hedef*(1-Math.pow(1-o,3))));
-      if(o<1) requestAnimationFrame(adim);
-    };
-    requestAnimationFrame(adim);
-  };
-  if(!('IntersectionObserver' in window)){ kutular.forEach(calistir); return; }
-  const io = new IntersectionObserver(g=>g.forEach(k=>{
-    if(k.isIntersecting && !k.target.dataset.bitti){ k.target.dataset.bitti='1'; calistir(k.target); }
-  }),{threshold:.4});
-  kutular.forEach(el=>io.observe(el));
 }
 
 /* ---- Kurs listesi + filtreler ------------------------------------- */
@@ -1963,6 +2362,11 @@ function listeyiCiz(){
   $('#bos-durum').style.display = sonuc.length ? 'none' : 'block';
   $('#sonuc-sayi').textContent = sonuc.length ? `${sonuc.length} kurs listeleniyor.` : 'Sonuç bulunamadı.';
   $$('#kat-filtre .cip').forEach(b=>b.classList.toggle('aktif', b.dataset.kat===filtreDurum.kategori));
+  /* Katılım biçimi: eski "Online Kurslarımız" ve "Yüz Yüze" menü bağlantılarının yerini alır */
+  const katSorgu = filtreDurum.kategori!=='hepsi' ? '?kategori='+filtreDurum.kategori : '';
+  $('#teslim-filtre').innerHTML = '<b>Katılım</b>' +
+    [['hepsi','/kurslar','Hepsi'],['yuzyuze','/yuz-yuze','Yüz yüze (Gelibolu)'],['online','/online-kurslar','Canlı online']]
+      .map(([id,yol,ad])=>`<a class="cip${filtreDurum.teslim===id?' aktif':''}" href="#${yol}${katSorgu}">${ad}</a>`).join('');
   waBaglantilariniKur();
 }
 
@@ -1974,7 +2378,7 @@ function detayCiz(slug){
     kutu.innerHTML = `<div class="bolum"><div class="kap"><div class="bos">
       <h3>Bu kurs bulunamadı.</h3>
       <p>Bağlantı değişmiş olabilir. Tüm programları listeden görebilirsiniz.</p>
-      <a class="dg dg-turkuaz" style="margin-top:20px" href="#/kurslar">Kurslara dön</a>
+      <a class="dg dg-turkuaz" style="margin-top:20px" href="#/kurslar">Programlara dön</a>
     </div></div></div>`;
     return;
   }
@@ -1984,7 +2388,7 @@ function detayCiz(slug){
   const sss = (k.sss||[]).concat(GENEL_SSS);
   const mesaj = `Merhaba, "${k.ad}" programı için kayıt ve kontenjan bilgisi almak istiyorum.`;
   const geriYol = k.teslim==='online' ? '/online-kurslar' : k.teslim==='yuzyuze' ? '/yuz-yuze' : '/kurslar';
-  const geriAd = k.teslim==='online' ? 'Online Kurslarımız' : k.teslim==='yuzyuze' ? 'Yüz Yüze (Gelibolu)' : 'Kurslar';
+  const geriAd = k.teslim==='online' ? 'Online Kurslarımız' : k.teslim==='yuzyuze' ? 'Yüz Yüze (Gelibolu)' : 'Programlar';
 
   kutu.innerHTML = `
   <div class="detay-ust">
@@ -2097,6 +2501,7 @@ function modulSssTikla(e){
 }
 
 /* ---- Yönlendirici ------------------------------------------------- */
+const BOLUM_YOLLARI = {'/programlar':'programlar', '/nasil-isliyor':'nasil', '/sss':'sss', '/tanisma-dersi':null};
 const SAYFALAR = {
   '/':'sayfa-anasayfa', '/kurslar':'sayfa-kurslar',
   '/online-kurslar':'sayfa-kurslar', '/yuz-yuze':'sayfa-kurslar',
@@ -2110,7 +2515,7 @@ const SAYFALAR = {
 /* Kurslar sayfasının başlığı/açıklaması, hangi yoldan gelindiğine göre değişir */
 const KURSLAR_SAYFA_METNI = {
   '/kurslar': {
-    iz:'Kurslar', baslik:'Kurslar',
+    iz:'Programlar', baslik:'Programlar',
     aciklama:'LGS hazırlık, İngilizce kursu programlarımız, eğitim koçluğu, branş bazında özel derslerimiz, gelişim programlarımız ve kamplarımız burada listelenir. Filtreleri kullanarak size uygun olanı daraltabilirsiniz.'
   },
   '/online-kurslar': {
@@ -2158,21 +2563,15 @@ function yonlendir(){
       kurslarBasligiGuncelle(temiz);
       listeyiCiz();
     }
-    if(temiz==='/') sayaclariBaslat();
   }
 
   if(typeof fbq === 'function' && ilkYonlendirmeGecti) fbq('track','PageView');
   ilkYonlendirmeGecti = true;
 
   {
-    const kursDetay = temiz.startsWith('/kurs/') ? KURSLAR.find(x=>x.slug===decodeURIComponent(temiz.replace('/kurs/',''))) : null;
+    const programYolu = temiz.startsWith('/kurs/') || ['/kurslar','/online-kurslar','/yuz-yuze'].includes(temiz);
     $$('.gezinti a[data-yol]').forEach(a=>{
-      let eslesme = a.dataset.yol===temiz;
-      if(kursDetay){
-        if(a.dataset.yol==='/online-kurslar') eslesme = !kursDetay.teslim || kursDetay.teslim==='online';
-        if(a.dataset.yol==='/yuz-yuze') eslesme = !kursDetay.teslim || kursDetay.teslim==='yuzyuze';
-      }
-      a.classList.toggle('aktif', eslesme);
+      a.classList.toggle('aktif', a.dataset.yol==='/kurslar' ? programYolu : a.dataset.yol===temiz);
     });
   }
 
@@ -2180,6 +2579,13 @@ function yonlendir(){
   $('#menu-dugme').setAttribute('aria-expanded','false');
   window.scrollTo(0,0);
   waBaglantilariniKur();
+
+  /* Ana sayfanın içindeki bölümlere giden adresler */
+  if(Object.prototype.hasOwnProperty.call(BOLUM_YOLLARI, temiz)){
+    const hedef = BOLUM_YOLLARI[temiz] && $('#'+BOLUM_YOLLARI[temiz]);
+    if(hedef) requestAnimationFrame(()=>hedef.scrollIntoView());
+    if(temiz==='/tanisma-dersi') tanismaAc();
+  }
 }
 
 /* ---- WhatsApp bağlantıları ---------------------------------------- */
@@ -2188,14 +2594,6 @@ function waBaglantilariniKur(){
     a.href = waLink(a.dataset.wa);
     a.target = '_blank'; a.rel = 'noopener';
   });
-  /* WhatsApp'a yönelen her tıklama Meta tarafında "Contact" dönüşümü sayılır.
-     Kampanya optimizasyonu bu olay üzerinden yapılır. */
-  document.addEventListener('click', e=>{
-    if(e.target.closest('[data-wa], #wa-ustbar, a[href^="https://wa.me"]')) olay('Contact');
-    if(e.target.closest('a[href^="tel:"]')) olay('Contact', {yontem:'telefon'});
-  });
-  const u = $('#wa-ustbar');
-  if(u){ u.href = waLink('Merhaba, İDOL SEGEM programları hakkında bilgi almak istiyorum.'); u.target='_blank'; u.rel='noopener'; }
 }
 
 /* ---- İletişim formu ----------------------------------------------- */
@@ -2231,32 +2629,10 @@ function formuKur(){
       '',
       mesaj
     ].filter(x=>x!==undefined);
-    olay('Lead', {content_name:'İletişim formu'});
+    izle('form_gonder', {form:'iletisim'});
     window.open(waLink(satirlar.join('\n')), '_blank', 'noopener');
   });
 }
-
-/* ---- Başlat ------------------------------------------------------- */
-anaSayfayiKur();
-filtreleriKur();
-formuKur();
-listeyiCiz();
-$('#yil').textContent = new Date().getFullYear();
-$$('[data-kampanya-bitis]').forEach(el => el.textContent = KURUM.kampanyaBitis);
-cerezBandiKur();
-const ct = $('#cerez-tercih');
-if(ct) ct.addEventListener('click', e=>{ e.preventDefault(); cerezTercihleriniAc(); });
-if($('#kvkk-tarih')) $('#kvkk-tarih').textContent = KURUM.kvkkTarih;
-
-$('#menu-dugme').addEventListener('click',()=>{
-  const n = $('#gezinti');
-  const acik = n.classList.toggle('acik');
-  $('#menu-dugme').setAttribute('aria-expanded', acik ? 'true':'false');
-});
-
-$('#sayfa-detay').addEventListener('click', modulSssTikla);
-window.addEventListener('hashchange', yonlendir);
-yonlendir();
 
 /* ---- Online ödeme -------------------------------------------------
    Fiyat bilgisi burada YALNIZCA gösterim içindir. Ödenecek tutar,
@@ -2470,6 +2846,257 @@ function odemeTablosu(k){
     </div>`;
 }
 
+
+/* ==================================================================
+   ANA SAYFA YENİLEME — yorumlar, SSS, ölçüm, tanışma dersi formu
+   ================================================================== */
+
+/* ---- Veli yorumları ------------------------------------------------
+   Yalnızca velisinden yazılı izin alınmış yorumları ekleyin ve
+   izin:true yazın. Liste boşsa bölüm yayında hiç görünmez.
+   Örnek satır:
+   {metin:'Velinin kendi cümleleri.', kim:'A. Y.', bilgi:'6. sınıf velisi · Ortaokul desteği', izin:true}
+------------------------------------------------------------------- */
+const YORUMLAR = [
+];
+
+/* ---- Ana sayfa SSS ------------------------------------------------- */
+const ANA_SSS = [
+  {s:'Tanışma dersi ücretsiz mi?', c:'Evet. Her yeni öğrenci bir tanışma dersine ücretsiz katılabilir. Dersin ardından karar vermekte özgürsünüz.'},
+  {s:'Ücret nasıl belirleniyor?', c:'Ücret, seçilen programa ve haftalık ders saatine göre değişir; bu yüzden sitede tek bir fiyat yazmıyoruz. Öğrencinize uygun program belirlendiğinde net ücreti ve ödeme seçeneklerini sizinle paylaşırız.', eylem:'ucret'},
+  {s:'Online ders nasıl işliyor?', c:'Şehir dışındaki öğrenciler aynı programı, aynı öğretmenlerle canlı olarak alır. Ders saatinden önce giriş bağlantısı iletilir; bilgisayar, tablet ya da telefondan katılabilirsiniz. Online gruplar da en fazla 5 kişidir ve ders kaydı sonradan tekrar izlenebilir.'},
+  {s:'Dersler hangi gün ve saatlerde?', c:'Gün ve saatler, öğrencinin sınıfına ve yerleşeceği gruba göre tanışma görüşmesinde belirlenir. Merkezimiz hafta içi 09.00–20.00, cumartesi 09.00–18.00 arasında açıktır.'},
+  {s:'Grup mevcudu kaç kişi?', c:'Grup derslerinde mevcut en fazla 5 kişidir; ihtiyaca göre 4, 3, 2 ve 1 kişilik sınıflar da oluşturulabilir. Özel ders ve eğitim koçluğu bire bir yürütülür.'},
+  {s:'Veli olarak gelişimi nasıl takip ederim?', c:'Ders, ödev, konu ilerlemesi ve devamsızlığı K12 veli panelinden izlersiniz. Her ay yazılı gelişim raporu gönderiyoruz, dönem içinde iki kez bire bir veli görüşmesi yapıyoruz.'}
+];
+
+/* ---- Ölçüm ---------------------------------------------------------
+   Üç dönüşüm ayrı ayrı izlenir:
+     tanisma_dersi_tikla  -> "Tanışma dersi" düğmesine tıklama
+     whatsapp_baslat      -> WhatsApp görüşmesi başlatma
+     form_gonder          -> form gönderme (tanışma dersi / iletişim)
+   Ek olarak telefon_ara kaydedilir. Her olayda düğmenin sayfadaki yeri
+   (konum) ve ilk ekran varyantı (a/b) birlikte gönderilir.
+   Olaylar dataLayer'a yazılır; Meta Pixel ya da Google etiketi
+   yüklüyse (çerez onayından sonra) onlara da iletilir.
+------------------------------------------------------------------- */
+let HERO_VARYANT = 'a';
+function izle(ad, veri){
+  const v = Object.assign({varyant:HERO_VARYANT}, veri||{});
+  (window.dataLayer = window.dataLayer || []).push(Object.assign({event:ad}, v));
+  if(typeof gtag === 'function') gtag('event', ad, v);
+  if(typeof fbq === 'function'){
+    const meta = {whatsapp_baslat:'Contact', telefon_ara:'Contact', form_gonder:'Lead'}[ad];
+    if(meta) fbq('track', meta, Object.assign({olay:ad}, v)); else fbq('trackCustom', ad, v);
+  }
+}
+function konumBul(el){
+  if(el.dataset.konum) return el.dataset.konum;
+  const b = el.closest('[data-bolum]');
+  if(b) return b.dataset.bolum;
+  if(el.closest('.altbilgi')) return 'alt-bilgi';
+  return (location.hash||'#/').slice(1).split('?')[0] || '/';
+}
+
+document.addEventListener('click', e=>{
+  const t = e.target.closest('[data-tanisma]');
+  if(t){
+    e.preventDefault();
+    izle('tanisma_dersi_tikla', {konum:konumBul(t)});
+    tanismaAc(t.dataset.program);
+    return;
+  }
+  const w = e.target.closest('[data-wa], a[href^="https://wa.me"]');
+  if(w && w.id !== 'td-tekrar'){ izle('whatsapp_baslat', {konum:konumBul(w)}); return; }
+  const p = e.target.closest('a[href^="tel:"]');
+  if(p){ izle('telefon_ara', {konum:konumBul(p)}); return; }
+  /* Zaten açık olan adrese tekrar tıklanırsa (ör. "Nasıl işliyor?") yine o bölüme gidilsin */
+  const a = e.target.closest('a[href^="#/"]');
+  if(a && a.getAttribute('href') === location.hash) yonlendir();
+});
+
+/* ---- İlk ekran A/B testi -------------------------------------------
+   KURUM.heroTest true yapılırsa ziyaretçilerin yarısı A'yı (ana düğme:
+   "Ücretsiz tanışma dersi planla"), yarısı B'yi (ana düğme:
+   "WhatsApp'tan bilgi al") görür. Denemek için adresin sonuna
+   #/?varyant=b yazabilirsiniz.
+------------------------------------------------------------------- */
+function heroVaryantSec(){
+  const sorgu = new URLSearchParams((location.hash.split('?')[1]) || '');
+  const zorla = (sorgu.get('varyant') || '').toLowerCase();
+  if(zorla === 'a' || zorla === 'b') return zorla;
+  if(!KURUM.heroTest) return 'a';
+  try{
+    let v = localStorage.getItem('idol-hero-varyant');
+    if(v !== 'a' && v !== 'b'){ v = Math.random() < .5 ? 'a' : 'b'; localStorage.setItem('idol-hero-varyant', v); }
+    return v;
+  }catch(e){ return Math.random() < .5 ? 'a' : 'b'; }
+}
+function heroVaryantUygula(){
+  HERO_VARYANT = heroVaryantSec();
+  document.body.dataset.varyant = HERO_VARYANT;
+  if(HERO_VARYANT !== 'b') return;
+  const t = $('#giris-dg-tanisma'), w = $('#giris-dg-wa');
+  w.classList.replace('dg-cizgi','dg-sari');
+  w.querySelector('span').textContent = "WhatsApp'tan bilgi al";
+  t.classList.replace('dg-sari','dg-cizgi');
+  t.parentNode.insertBefore(w, t);
+}
+
+/* ---- Ana sayfa bölümlerini doldur ---------------------------------- */
+function anaBolumleriKur(){
+  document.body.classList.toggle('taslak', !!KURUM.taslakModu);
+
+  /* İlk ekran fotoğrafı */
+  if(KURUM.heroFoto){
+    const im = $('#giris-foto-img');
+    im.alt = KURUM.heroFotoAlt || '';
+    im.onload = ()=>{
+      im.hidden = false;
+      $('#giris-cizim').style.display = 'none';
+      const n = $('#giris-foto .taslak-not'); if(n) n.remove();
+    };
+    im.src = KURUM.heroFoto;
+  }
+
+  /* Veli yorumları */
+  const yayin = YORUMLAR.filter(y=>y && y.izin === true && y.metin);
+  const bolum = $('#yorumlar'), grid = $('#yorum-grid');
+  if(yayin.length){
+    grid.innerHTML = yayin.slice(0,6).map(y=>`
+      <figure class="yorum">
+        <blockquote>${kacar(y.metin)}</blockquote>
+        <figcaption><b>${kacar(y.kim||'Velimiz')}</b>${kacar(y.bilgi||'')}</figcaption>
+      </figure>`).join('');
+    bolum.hidden = false;
+  } else if(KURUM.taslakModu){
+    const kutular = [
+      ['İzinli veli yorumu', 'Velinin kendi cümleleriyle 2–3 cümle: öğrenci kaçıncı sınıfta, hangi programa katıldı, veli neyi fark etti. İmza biçimi: “A. Y. · 6. sınıf velisi”.'],
+      ['Gerçek öğrenci deneyimi', 'Öğrencinin programda yaşadığı somut bir deneyim. Öğrenci adı ve fotoğrafı yalnızca veli izniyle kullanılır.'],
+      ['Doğrulanabilir başarı örneği', 'Belgeyle gösterilebilen bir sonuç: yıl, sınav ve program. “5.000+ öğrenci” gibi dayanağı kolayca açıklanamayan sayılar burada yer almaz.']
+    ];
+    grid.innerHTML = kutular.map(([b,a])=>`
+      <div class="yorum yorum-taslak">
+        <span class="taslak-etiket">Taslak · içerik bekliyor</span>
+        <h3>${b}</h3><p>${a}</p>
+      </div>`).join('') +
+      `<p class="yorum-taslak-not">Bu kutular yalnızca taslak modunda görünür. Henüz izinli yorum eklenmediği için bölüm yayında gizli kalır; uydurma yorum yerleştirilmedi.</p>`;
+    $('#yorum-aciklama').textContent = 'Bu bölüm, izin alınmış gerçek yorumlar eklendiğinde yayına girer.';
+    bolum.hidden = false;
+  }
+
+  /* SSS */
+  const ucretEylem = `
+    <div class="sss-eylem">
+      <a class="dg dg-cizgi dg-kck" href="#" data-wa="Merhaba, ücret bilgisi için görüşme talep ediyorum." data-konum="sss-ucret">
+        <svg class="wa-ikon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#ik-wa"/></svg>Görüşme talep et</a>
+      <a class="dg dg-cizgi dg-kck" href="tel:+90${KURUM.waNo.slice(2)}" data-konum="sss-ucret">${kacar(KURUM.tel)}</a>
+    </div>`;
+  $('#ana-sss').innerHTML = ANA_SSS.map((f,i)=>`
+    <div class="sss-oge${i===0?' acik':''}">
+      <button class="sss-bas" data-sss aria-expanded="${i===0?'true':'false'}"><span class="soru">${kacar(f.s)}</span>
+        <span class="arti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="sss-cevap">${kacar(f.c)}${f.eylem==='ucret'?ucretEylem:''}</div>
+    </div>`).join('');
+  $('#sayfa-anasayfa').addEventListener('click', modulSssTikla);
+}
+
+/* ---- Tanışma dersi formu ------------------------------------------- */
+const TD_PROGRAM = {temel:'İlkokul ve ortaokul desteği', etut:'İlkokul ve ortaokul desteği', lgs:'LGS hazırlık', 'ingilizce-kursu':'İngilizce', 'ozel-ders':'Özel ders', kocluk:'Eğitim koçluğu', gelisim:'Gelişim programları'};
+
+function tanismaAc(program){
+  const td = $('#td');
+  $('#td-form').hidden = false;
+  $('#td-tamam').hidden = true;
+  $('#td-uyari').classList.remove('gorunur');
+  /* Bir program sayfasından açıldıysa o program hazır seçili gelir */
+  if(!program){
+    const yol = (location.hash||'').slice(1).split('?')[0];
+    if(yol.startsWith('/kurs/')){
+      const k = kursBul(decodeURIComponent(yol.replace('/kurs/','')));
+      if(k) program = TD_PROGRAM[k.kategori];
+    }
+  }
+  if(program) $('#td-program').value = program;
+  if(!td.open){ if(td.showModal) td.showModal(); else td.setAttribute('open',''); }
+  $('#td-ad').focus();
+}
+function tanismaKapat(){
+  const td = $('#td');
+  if(td.open){ if(td.close) td.close(); else td.removeAttribute('open'); }
+}
+function tanismaKur(){
+  const td = $('#td');
+  $('#td-kapat').addEventListener('click', tanismaKapat);
+  td.addEventListener('click', e=>{ if(e.target === td) tanismaKapat(); });
+  td.addEventListener('close', ()=>{
+    if((location.hash||'').startsWith('#/tanisma-dersi')) history.replaceState(null, '', '#/');
+  });
+  $('#td-kvkk-bag').target = '_blank';
+
+  $('#td-form').addEventListener('submit', e=>{
+    e.preventDefault();
+    const ad = $('#td-ad').value.trim();
+    const tel = $('#td-tel').value.trim();
+    const sinif = $('#td-sinif').value;
+    const program = $('#td-program').value;
+    const katilim = (td.querySelector('input[name="td-katilim"]:checked')||{}).value || '';
+    const zaman = $('#td-zaman').value.trim();
+    const uyari = $('#td-uyari');
+    const dur = (mesaj, alan)=>{ uyari.textContent = mesaj; uyari.classList.add('gorunur'); alan.focus(); };
+
+    if(!ad) return dur('Lütfen adınızı ve soyadınızı yazın.', $('#td-ad'));
+    if(tel.replace(/\D/g,'').length < 10) return dur('Size ulaşabilmemiz için telefon numaranızı alan koduyla birlikte yazın.', $('#td-tel'));
+    if(!sinif) return dur('Lütfen öğrencinin sınıfını seçin.', $('#td-sinif'));
+    if(!$('#td-kvkk').checked) return dur('Talebi gönderebilmek için KVKK aydınlatma metnini onaylamanız gerekir.', $('#td-kvkk'));
+    uyari.classList.remove('gorunur');
+
+    const satirlar = [
+      'Merhaba, ücretsiz tanışma dersi planlamak istiyorum.',
+      '',
+      `Veli: ${ad}`,
+      `Telefon: ${tel}`,
+      `Öğrencinin sınıfı: ${sinif}`,
+      `Program: ${program || 'Henüz emin değilim, birlikte belirleyelim'}`,
+      `Katılım: ${katilim}`,
+      zaman ? `Uygun gün ve saat: ${zaman}` : null
+    ].filter(x=>x!==null);
+    const bag = waLink(satirlar.join('\n'));
+
+    /* Kişisel veri ölçüme gönderilmez; yalnızca seçimler gider */
+    izle('form_gonder', {form:'tanisma-dersi', sinif, program:program||'belirsiz', katilim});
+    window.open(bag, '_blank', 'noopener');
+    $('#td-tekrar').href = bag;
+    $('#td-form').hidden = true;
+    $('#td-tamam').hidden = false;
+  });
+}
+
+/* ---- Başlat ------------------------------------------------------- */
+anaSayfayiKur();
+anaBolumleriKur();
+tanismaKur();
+heroVaryantUygula();
+filtreleriKur();
+formuKur();
+listeyiCiz();
+$('#yil').textContent = new Date().getFullYear();
+$$('[data-kampanya-bitis]').forEach(el => el.textContent = KURUM.kampanyaBitis);
+cerezBandiKur();
+const ct = $('#cerez-tercih');
+if(ct) ct.addEventListener('click', e=>{ e.preventDefault(); cerezTercihleriniAc(); });
+if($('#kvkk-tarih')) $('#kvkk-tarih').textContent = KURUM.kvkkTarih;
+
+$('#menu-dugme').addEventListener('click',()=>{
+  const n = $('#gezinti');
+  const acik = n.classList.toggle('acik');
+  $('#menu-dugme').setAttribute('aria-expanded', acik ? 'true':'false');
+});
+
+$('#sayfa-detay').addEventListener('click', modulSssTikla);
+window.addEventListener('hashchange', yonlendir);
+yonlendir();
 </script>
 </body>
 </html>
