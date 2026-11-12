@@ -724,6 +724,7 @@ ul.son-saat b{font-weight:700}
 .galeri-oge span{position:absolute; left:0; right:0; bottom:0; padding:34px 16px 13px; text-align:left; color:#fff; font-size:14px; font-weight:700; background:linear-gradient(transparent,rgba(4,38,60,.82))}
 .galeri-oge:focus-visible{outline:3px solid var(--turkuaz); outline-offset:2px}
 .galeri-grid{grid-auto-flow:dense}
+.galeri-oge.logolu span{padding-left:calc(18.5% + 10px)}
 @media(min-width:821px){ .galeri-oge.genis{grid-column:span 2; aspect-ratio:auto} }
 @media(max-width:820px){ .galeri-oge.genis{grid-column:1/-1; aspect-ratio:2/1} }
 .not-baslik{margin-top:48px; font-size:22px; font-weight:800}
@@ -3122,11 +3123,11 @@ yonlendir();
    satır ekleyin. Sıra, sitedeki sırayı belirler.
 ------------------------------------------------------------------- */
 const GALERI = [
-  {src:'foto/galeri-sinif-calismasi.jpg',    yazi:'Sınıfta İngilizce çalışması'},
-  {src:'foto/ana-sayfa.jpg',                 yazi:'İngilizce etkinliği: katılım belgesi töreni'},
+  {src:'foto/galeri-sinif-calismasi.jpg', logo:true,    yazi:'Sınıfta İngilizce çalışması'},
+  {src:'foto/ana-sayfa.jpg', logo:true,                 yazi:'İngilizce etkinliği: katılım belgesi töreni'},
   {src:'foto/galeri-dil-laboratuvari.jpg', genis:true,   yazi:'Bilgisayarlı dil laboratuvarımız'},
-  {src:'foto/galeri-akilli-tahta.jpg',       yazi:'Akıllı tahtalı sınıfımız'},
-  {src:'foto/galeri-basari-sertifikasi.jpg', yazi:'AHOB başarı sertifikası'},
+  {src:'foto/galeri-akilli-tahta.jpg', logo:true,       yazi:'Akıllı tahtalı sınıfımız'},
+  {src:'foto/galeri-basari-sertifikasi.jpg', logo:true, yazi:'AHOB başarı sertifikası'},
   {src:'foto/galeri-bekleme-alani.jpg', genis:true,      yazi:'Merkezimizin bekleme alanı'},
   {src:'foto/galeri-tanitim-standi.jpg',     yazi:'Tanıtım standımız'},
   {src:'foto/galeri-merdiven.jpg',           yazi:'İngilizce sloganlı merdivenlerimiz'},
@@ -3150,7 +3151,7 @@ const NOTLAR = [
   const kutular = document.querySelectorAll('[data-galeri]');
   if(!GALERI.length){ kutular.forEach(k=>{ const b=k.closest('[data-bolum="galeri"]'); if(b) b.hidden=true; }); }
   const icerik = GALERI.map((g,i)=>
-    `<button type="button" class="galeri-oge${g.genis?' genis':''}" data-galeri-sira="${i}" aria-label="${kacar(g.yazi)} - büyüt">`+
+    `<button type="button" class="galeri-oge${g.genis?' genis':''}${g.logo?' logolu':''}" data-galeri-sira="${i}" aria-label="${kacar(g.yazi)} - büyüt">`+
     `<img src="${kacar(g.src)}" alt="${kacar(g.yazi)}" loading="lazy" decoding="async"><span>${kacar(g.yazi)}</span></button>`).join('');
   kutular.forEach(k=>{ k.innerHTML = icerik; });
   const isik=document.getElementById('isik'), img=document.getElementById('isik-img'), yazi=document.getElementById('isik-yazi');
