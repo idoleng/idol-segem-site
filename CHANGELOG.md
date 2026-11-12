@@ -217,3 +217,34 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
   tüm yüzler bulanıklaştırıldı.
 - Veli yorumu şimdilik yok: `YORUMLAR` listesi boş, bölüm yayında gizli.
 - `taslakModu` kapalı (`false`); taslak notları ziyaretçiye görünmez.
+
+## v9 — 2026-11-12
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `39a191f`
+
+### Değişenler
+- 17 kurs kartının kapağındaki çizimler fotoğraflarla değiştirildi (`foto/<kurs>.jpg`,
+  1200×750). Fotoğraflar Unsplash'ten alındı; Unsplash Lisansı ticari kullanıma
+  izin verir, kaynak göstermek zorunlu değildir. Bunlar temsili stok görsellerdir,
+  kurumun kendi çekimleri değildir.
+- Bir kursu yeniden çizime döndürmek için `index.html` içinde o kursun
+  `gorsel:'foto/...'` alanını silmek yeterlidir.
+
+### Fotoğraf kaynakları (images.unsplash.com/photo-<kimlik>)
+- `foto/ilkokul-destek.jpg` — `photo-1588072432836-e10032774350`
+- `foto/ortaokul-destek.jpg` — `photo-1577896851231-70ef18881754`
+- `foto/lgs-hazirlik-8-sinif.jpg` — `photo-1606326608606-aa0b62935f2b`
+- `foto/ingilizce-kursu.jpg` — `photo-1610484826967-09c5720778c7`
+- `foto/ingilizce-kursu-yuzyuze.jpg` — `photo-1509062522246-3755977927d7`
+- `foto/cocuklar-icin-ingilizce.jpg` — `photo-1503676260728-1c00da094a0b`
+- `foto/etut-programi.jpg` — `photo-1529390079861-591de354faf5`
+- `foto/egitim-koclugu.jpg` — `photo-1506784983877-45594efa4cbe`
+- `foto/ozel-ders-ingilizce.jpg` — `photo-1546410531-bb4caa6b424d`
+- `foto/ozel-ders-matematik.jpg` — `photo-1509228468518-180dd4864904`
+- `foto/ozel-ders-fen.jpg` — `photo-1532094349884-543bc11b234d`
+- `foto/ozel-ders-turkce.jpg` — `photo-1471107340929-a87cd0f5b5f3`
+- `foto/ozel-ders-inkilap.jpg` — `photo-1461360370896-922624d12aa1`
+- `foto/ozel-ders-din.jpg` — `photo-1589998059171-988d887df646`
+- `foto/ahob-anlayarak-hizli-okuma.jpg` — `photo-1491841550275-ad7854e35ca6`
+- `foto/bilissel-beceriler.jpg` — `photo-1603354350317-6f7aaa5911c5`
+- `foto/yaz-kampi.jpg` — `photo-1472162072942-cd5147eb3902`
