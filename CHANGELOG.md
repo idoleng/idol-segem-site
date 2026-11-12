@@ -231,13 +231,13 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
   `gorsel:'foto/...'` alanını silmek yeterlidir.
 
 ### Fotoğraf kaynakları (images.unsplash.com/photo-<kimlik>)
-- `foto/ilkokul-destek.jpg` — `photo-1588072432836-e10032774350`
+- `foto/ilkokul-destek.jpg` — `photo-1560785496-3c9d27877182`
 - `foto/ortaokul-destek.jpg` — `photo-1577896851231-70ef18881754`
 - `foto/lgs-hazirlik-8-sinif.jpg` — `photo-1606326608606-aa0b62935f2b`
 - `foto/ingilizce-kursu.jpg` — `photo-1610484826967-09c5720778c7`
-- `foto/ingilizce-kursu-yuzyuze.jpg` — `photo-1509062522246-3755977927d7`
+- `foto/ingilizce-kursu-yuzyuze.jpg` — `photo-1588075592446-265fd1e6e76f`
 - `foto/cocuklar-icin-ingilizce.jpg` — `photo-1503676260728-1c00da094a0b`
-- `foto/etut-programi.jpg` — `photo-1529390079861-591de354faf5`
+- `foto/etut-programi.jpg` — `photo-1518133910546-b6c2fb7d79e3`
 - `foto/egitim-koclugu.jpg` — `photo-1506784983877-45594efa4cbe`
 - `foto/ozel-ders-ingilizce.jpg` — `photo-1546410531-bb4caa6b424d`
 - `foto/ozel-ders-matematik.jpg` — `photo-1509228468518-180dd4864904`
