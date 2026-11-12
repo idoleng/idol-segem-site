@@ -272,3 +272,6 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
 - Ana sayfadaki yorum bölümü "Öğrencilerimiz ne diyor?" başlığıyla yayına alındı.
   Altı yorum, öğrencilerin panoya bıraktığı el yazısı notlardan alındı; isimler
   baş harfleriyle verildi, yazım hataları düzeltildi, bazı notlar kısaltıldı.
+- Yorum bölümüne "Panomuzdan el yazısı notlar" eklendi: dokuz öğrenci notunun
+  kırpılmış fotoğrafı (`foto/not-*.jpg`). Öğrenci adları ve başka kuruma ait
+  antet bulanıklaştırıldı ya da kırpıldı; nota tıklayınca büyür.
