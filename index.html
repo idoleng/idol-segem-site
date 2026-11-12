@@ -716,6 +716,23 @@ ul.son-saat b{font-weight:700}
 @media (prefers-reduced-motion:reduce){
   .prog:hover{transform:none}
 }
+/* --- Fotoğraf galerisi ------------------------------------------ */
+.galeri-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.galeri-oge{position:relative; margin:0; padding:0; border:0; background:var(--cizgi); border-radius:var(--r-m); overflow:hidden; cursor:zoom-in; aspect-ratio:4/3; display:block; width:100%; font:inherit}
+.galeri-oge img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .35s}
+.galeri-oge:hover img,.galeri-oge:focus-visible img{transform:scale(1.04)}
+.galeri-oge span{position:absolute; left:0; right:0; bottom:0; padding:34px 16px 13px; text-align:left; color:#fff; font-size:14px; font-weight:700; background:linear-gradient(transparent,rgba(4,38,60,.82))}
+.galeri-oge:focus-visible{outline:3px solid var(--turkuaz); outline-offset:2px}
+.isik{position:fixed; inset:0; z-index:400; background:rgba(8,18,26,.93); display:none; align-items:center; justify-content:center; flex-direction:column; padding:56px 16px 20px}
+.isik.acik{display:flex}
+.isik img{max-width:min(1100px,100%); max-height:calc(100vh - 150px); border-radius:12px; object-fit:contain}
+.isik p{color:#fff; margin-top:14px; font-size:15px; font-weight:600; text-align:center}
+.isik button{position:absolute; width:46px; height:46px; border-radius:50%; border:1px solid rgba(255,255,255,.4); background:rgba(255,255,255,.12); color:#fff; font-size:24px; line-height:1; cursor:pointer}
+.isik button:hover{background:rgba(255,255,255,.26)}
+.isik-kapat{top:14px; right:14px}
+.isik-geri{left:14px; top:50%; transform:translateY(-50%)}
+.isik-ileri{right:14px; top:50%; transform:translateY(-50%)}
+@media(max-width:820px){ .galeri-grid{grid-template-columns:repeat(2,1fr); gap:10px} .galeri-oge span{font-size:12.5px; padding:26px 10px 9px} .isik-geri,.isik-ileri{top:auto; bottom:14px; transform:none} }
 </style>
 </head>
 <body>
@@ -951,6 +968,18 @@ ul.son-saat b{font-weight:700}
     </div>
   </div>
 
+  <!-- Fotoğraf galerisi: liste aşağıdaki GALERI dizisinden doldurulur -->
+  <div class="bolum bolum-krem" id="galeri" data-bolum="galeri">
+    <div class="kap">
+      <div class="bolum-basi">
+        <span class="kicker">Galeri</span>
+        <h2 id="galeri-baslik">Merkezimizden kareler</h2>
+        <p>Gelibolu'daki merkezimizden, etkinliklerimizden ve öğrencilerimizin başarı anlarından fotoğraflar. Öğrenci ve veli yüzleri gizlilik için bulanıklaştırılmıştır.</p>
+      </div>
+      <div class="galeri-grid" data-galeri></div>
+    </div>
+  </div>
+
   <!-- 4. Veli yorumları: YORUMLAR listesi boşsa ve taslak modu kapalıysa bu bölüm hiç görünmez -->
   <div class="bolum bolum-krem" id="yorumlar" data-bolum="yorumlar" hidden>
     <div class="kap">
@@ -1167,6 +1196,18 @@ ul.son-saat b{font-weight:700}
       </div>
     </div>
   </div>
+  <!-- Fotoğraf galerisi: liste aşağıdaki GALERI dizisinden doldurulur -->
+  <div class="bolum bolum-krem" data-bolum="galeri">
+    <div class="kap">
+      <div class="bolum-basi">
+        <span class="kicker">Galeri</span>
+        <h2 id="galeri-baslik-hk">Merkezimizden kareler</h2>
+        <p>Gelibolu'daki merkezimizden, etkinliklerimizden ve öğrencilerimizin başarı anlarından fotoğraflar. Öğrenci ve veli yüzleri gizlilik için bulanıklaştırılmıştır.</p>
+      </div>
+      <div class="galeri-grid" data-galeri></div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ================= İLETİŞİM ================= -->
@@ -1672,6 +1713,14 @@ ul.son-saat b{font-weight:700}
   </div>
 </dialog>
 
+<!-- Galeri büyütme penceresi -->
+<div class="isik" id="isik" role="dialog" aria-modal="true" aria-label="Fotoğraf" hidden>
+  <button class="isik-kapat" id="isik-kapat" aria-label="Kapat">×</button>
+  <button class="isik-geri" id="isik-geri" aria-label="Önceki fotoğraf">‹</button>
+  <img id="isik-img" alt="">
+  <p id="isik-yazi"></p>
+  <button class="isik-ileri" id="isik-ileri" aria-label="Sonraki fotoğraf">›</button>
+</div>
 <script>
 /* ==================================================================
    İDOL SEGEM — tek dosya site
@@ -3093,6 +3142,40 @@ $('#menu-dugme').addEventListener('click',()=>{
 $('#sayfa-detay').addEventListener('click', modulSssTikla);
 window.addEventListener('hashchange', yonlendir);
 yonlendir();
+
+/* ---- Fotoğraf galerisi --------------------------------------------
+   Yeni fotoğraf eklemek için dosyayı foto/ klasörüne koyup aşağıya bir
+   satır ekleyin. Sıra, sitedeki sırayı belirler.
+------------------------------------------------------------------- */
+const GALERI = [
+  {src:'foto/ana-sayfa.jpg',                 yazi:'İngilizce etkinliği: katılım belgesi töreni'},
+  {src:'foto/galeri-bekleme-alani.jpg',      yazi:'Merkezimizin bekleme alanı'},
+  {src:'foto/galeri-basari-sertifikasi.jpg', yazi:'AHOB başarı sertifikası'},
+  {src:'foto/galeri-merdiven.jpg',           yazi:'İngilizce sloganlı merdivenlerimiz'},
+  {src:'foto/galeri-ara-ogun.jpg',           yazi:'Ders arasında öğrencilerimiz'},
+  {src:'foto/galeri-belgeler.jpg',           yazi:'ISO 9001:2015 ve marka tescil belgelerimiz'}
+];
+(function galeriyiKur(){
+  const kutular = document.querySelectorAll('[data-galeri]');
+  if(!kutular.length) return;
+  if(!GALERI.length){ kutular.forEach(k=>{ const b=k.closest('[data-bolum="galeri"]'); if(b) b.hidden=true; }); return; }
+  const icerik = GALERI.map((g,i)=>
+    `<button type="button" class="galeri-oge" data-galeri-sira="${i}" aria-label="${kacar(g.yazi)} - büyüt">`+
+    `<img src="${kacar(g.src)}" alt="${kacar(g.yazi)}" loading="lazy" decoding="async"><span>${kacar(g.yazi)}</span></button>`).join('');
+  kutular.forEach(k=>{ k.innerHTML = icerik; });
+  const isik=document.getElementById('isik'), img=document.getElementById('isik-img'), yazi=document.getElementById('isik-yazi');
+  let sira=0, oncekiOdak=null;
+  function goster(i){ sira=(i+GALERI.length)%GALERI.length; img.src=GALERI[sira].src; img.alt=GALERI[sira].yazi; yazi.textContent=GALERI[sira].yazi+' · '+(sira+1)+'/'+GALERI.length; }
+  function ac(i){ oncekiOdak=document.activeElement; goster(i); isik.hidden=false; isik.classList.add('acik'); document.body.style.overflow='hidden'; document.getElementById('isik-kapat').focus(); }
+  function kapat(){ isik.classList.remove('acik'); isik.hidden=true; document.body.style.overflow=''; if(oncekiOdak) oncekiOdak.focus(); }
+  document.addEventListener('click', e=>{ const o=e.target.closest('.galeri-oge'); if(o) ac(+o.dataset.galeriSira); });
+  document.getElementById('isik-kapat').addEventListener('click', kapat);
+  document.getElementById('isik-geri').addEventListener('click', ()=>goster(sira-1));
+  document.getElementById('isik-ileri').addEventListener('click', ()=>goster(sira+1));
+  isik.addEventListener('click', e=>{ if(e.target===isik) kapat(); });
+  document.addEventListener('keydown', e=>{ if(!isik.classList.contains('acik')) return;
+    if(e.key==='Escape') kapat(); else if(e.key==='ArrowLeft') goster(sira-1); else if(e.key==='ArrowRight') goster(sira+1); });
+})();
 </script>
 </body>
 </html>

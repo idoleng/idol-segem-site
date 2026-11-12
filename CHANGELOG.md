@@ -248,3 +248,17 @@ bilgisi gösterilmiyor. Fiyatlar ileride yeniden eklenecekse eski tutarlar
 - `foto/ahob-anlayarak-hizli-okuma.jpg` — `photo-1491841550275-ad7854e35ca6`
 - `foto/bilissel-beceriler.jpg` — `photo-1603354350317-6f7aaa5911c5`
 - `foto/yaz-kampi.jpg` — `photo-1472162072942-cd5147eb3902`
+
+## v10 — 2026-11-12
+
+**Geri dönüş noktası (bu değişiklikten önceki commit):** `62f2c88`
+
+### Değişenler
+- "Merkezimizden kareler" fotoğraf galerisi eklendi: ana sayfada (SSS'den önce) ve
+  Hakkımızda sayfasının sonunda. Fotoğrafa tıklayınca büyür; ok tuşları ve
+  düğmelerle gezilir, Esc ile kapanır.
+- Galeride kurumun kendi 6 fotoğrafı var (`foto/galeri-*.jpg` ve `foto/ana-sayfa.jpg`).
+  Öğrenci ve veli yüzleri, başarı sertifikasındaki öğrenci adı ve belgelerdeki
+  T.C. kimlik/belge numarası satırları bulanıklaştırıldı.
+- Yeni fotoğraf eklemek için dosyayı `foto/` klasörüne koyup `index.html` içindeki
+  `GALERI` listesine bir satır eklemek yeterli.
